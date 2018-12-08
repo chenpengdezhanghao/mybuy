@@ -11,8 +11,10 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'index/css/index.css' %}"/>
 	</head>
 	<body>
+
+
 		<div class="ad_top">
-			<a href="#"><img src="img/indeximg/banner-top.jpg"/></a>
+			<a href="#"><img src="{% static 'index/img/indeximg/banner-top.jpg'%}"></a>
 		</div>
 		<div class="top_nav_wrap">
 			<div class="top_nav width clearfix">
@@ -40,7 +42,7 @@
 								<li><a href="#">电子礼品卡</a></li>
 								<li><a href="#">兑 换 券</a></li>
 							</ul>
-						</div>	
+						</div>
 					</li>
 					<li class="cart fl"><p><a href="#"><span class="text">购物车<b>0</b>件</span></a></p></li>
 					<li class="line float">|</li>
@@ -62,20 +64,20 @@
 		<div class="header clearfix">
 			<div class="width">
 				<div class="logo fl">
-					<a href="#"><img src="img/indeximg/logo.jpg"/></a>
+					<a href="#"><img src="{% static 'index/img/indeximg/logo.jpg'%}"></a>
 				</div>
 				<div class="ad_header fl">
-					<a href="#"><img src="img/indeximg/ad01.jpg"/></a>
+					<a href="#"><img src="{% static 'index/img/indeximg/ad01.jpg'%}"></a>
 				</div>
 				<div class="search-wrap fl">
 					<div class="search-l fl">
-						<div class="btn">					
+						<div class="btn">
 						</div>
-						<input class="fl" type="text" name="" id="" placeholder="回家过节 吃点好的 进口零食坚果低至59.9" />
+						<input class="fl" type="text" name="" id="" placeholder="回家过节 吃点好的 进口零食坚果低至59.9">
 						<button class="search-btn fl">搜索</button>
 					</div>
 					<div class="search-r fl">
-						<a href="#">高级<br/>搜索</a>
+						<a href="#">高级<br>搜索</a>
 					</div>
 					<div class="search-b">
 						<a href="#">月饼</a>
@@ -87,7 +89,7 @@
 					</div>
 				</div>
 				<div class="app fr">
-					<img src="img/indeximg/appcode.jpg"/>
+					<img src="{% static 'index/img/indeximg/appcode.jpg'%}">
 				</div>
 			</div>
 		</div>
@@ -148,7 +150,7 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -173,9 +175,9 @@
 											<li class="sub-kind"><a href="#">苹果</a></li>
 											<li class="sub-kind"><a href="#">热带水果</a></li>
 											<li class="sub-kind"><a href="#">芒果</a></li>
-										</ul>							
+										</ul>
 									</div>
-								</div>							
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -247,7 +249,7 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -310,7 +312,7 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>							
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -364,7 +366,7 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -409,7 +411,7 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>							
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -472,7 +474,7 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -544,7 +546,7 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -581,7 +583,7 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -635,7 +637,7 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</li>
 						<li class="kinds">
@@ -655,13 +657,13 @@
 											<li class="sub-kind"><a href="#">芒果</a></li>
 										</ul>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</li>
 					</ul>
 				</div>
 				<div class="nav-im">
-					<ul >
+					<ul>
 						<li><a href="#">团购</a></li>
 						<li><a href="#">每日鲜</a></li>
 						<li><a href="#">我买酒</a></li>
@@ -680,13 +682,13 @@
 							<a href="#">购物车</a>
 						</span>
 						<span class="arrow">
-							
+
 						</span>
 					</div>
 					<div class="min-cart">
 						<div class="free">
 							<span>
-								<img src="img/indeximg/cart-no.jpg"/>
+								<img src="{% static 'index/img/indeximg/cart-no.jpg'%}">
 							</span>
 							<p>
 								购物车中还没有商品，赶紧选购吧！<a href="#">去首页看看</a>
@@ -704,7 +706,7 @@
 			</div>
 		</div>
 		<div class="width">
-			
+
 		</div>
 		<div class="banner-wrap">
 			<div class="width">
@@ -714,10 +716,10 @@
 					<ul id="mark">
 					</ul>
 					<div id="prer">
-						
+
 					</div>
 					<div id="next">
-						
+
 					</div>
 				</div>
 				<div class="banner-r fl">
@@ -730,180 +732,180 @@
 						<ul class="cont-wrap">
 							<li class="cont">
 								<ul>
-									<li><a href="#"><span></span><b>包邮直送及全球购频道...</b></a></li>						    
+									<li><a href="#"><span></span><b>包邮直送及全球购频道...</b></a></li>
 									<li><a href="#"><span></span><b>武汉站及安徽站配送延...</b></a></li>
 									<li><a href="#"><span></span><b>翼支付满39元随机立减...</b></a></li>
 								</ul>
 							</li>
 							<li class="cont" style="display: none;">
 								<ul>
-									<li><a href="#"><span></span><b>上海肯德基活动小提示...</b></a></li>						    
+									<li><a href="#"><span></span><b>上海肯德基活动小提示...</b></a></li>
 									<li><a href="#"><span></span><b>注册送劵活动单品折扣...</b></a></li>
 									<li><a href="#"><span></span><b>网络申请民生信用卡，...</b></a></li>
 								</ul>
 							</li>
 							<li class="cont" style="display: none;">
-								<ul >
-									<li><a href="#"><span></span><b>2016年4月VIP会员专享...</b></a></li>						    
+								<ul>
+									<li><a href="#"><span></span><b>2016年4月VIP会员专享...</b></a></li>
 									<li><a href="#"><span></span><b>2016年3月VIP 会员专享...</b></a></li>
 									<li><a href="#"><span></span><b>2016年2月VIP会员专享...</b></a></li>
-								</ul>							
+								</ul>
 							</li>
-													
+
 						</ul>
 						<div class="app-wrap">
 							<ul class="phapp">
-								<li><a href="#"><img src="img/indeximg/appicon-01.png"/></a></li>
-								<li><a href="#"><img src="img/indeximg/appicon-02.png"/></a></li>
-								<li><a href="#"><img src="img/indeximg/appicon-03.png"/></a></li>
-								<li><a href="#"><img src="img/indeximg/appicon-04.png"/></a></li>
-								<li><a href="#"><img src="img/indeximg/appicon-05.png"/></a></li>
-								<li><a href="#"><img src="img/indeximg/appicon-06.png"/></a></li>
-								<li><a href="#"><img src="img/indeximg/appicon-07.png"/></a></li>
-								<li><a href="#"><img src="img/indeximg/appicon-08.png"/></a></li>
-								<li><a href="#"><img src="img/indeximg/appicon-09.png"/></a></li>
+								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-01.png'%}"></a></li>
+								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-02.png'%}"></a></li>
+								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-03.png'%}"></a></li>
+								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-04.png'%}"></a></li>
+								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-05.png'%}"></a></li>
+								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-06.png'%}"></a></li>
+								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-07.png'%}"></a></li>
+								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-08.png'%}"></a></li>
+								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-09.png'%}"></a></li>
 							</ul>
 							<div class="app-ad">
-								<a href="#"><img src="img/indeximg/appad.png"/></a>
+								<a href="#"><img src="{% static 'index/img/indeximg/appad.png'%}"></a>
 							</div>
-						</div>				
+						</div>
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 		<!--主体 item-->
 		<div class="main-wrap">
 			<div class="main width">
-				<h2 class="parttit"><a href="#">每日劲爆品</a><img src="img/indeximg/msg-01.jpg"/></h2>
-				<div class="madden clearfix">				
+				<h2 class="parttit"><a href="#">每日劲爆品</a><img src="{% static 'index/img/indeximg/msg-01.jpg'%}"></h2>
+				<div class="madden clearfix">
 					<div class="madden-l">
 						<div class="aimg">
-							<img src="img/indeximg/animation.png"/>
+							<img src="{% static 'index/img/indeximg/animation.png'%}">
 						</div>
-						<a href="#"><img src="img/indeximg/madden-in.jpg"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/madden-in.jpg'%}"></a>
 					</div>
 					<div class="madlist-wrap">
 						<ul class="madlist">
-							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-01.jpg"/></a>
+							<li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-01.jpg'%}"></a>
 								<div class="infor">
 									<p class="item"><a href="#">维多丽白肉蜜柚2粒礼盒装</a></p>
 									<p class="infortext"><a href="#">2.4-2.8kg | 肉清甜,水分含量适</a></p>
 									<p class="buy-btn"><span class="buy-l">￥<span>29.9</span></span><a href="#">去看看</a></p>
 								</div>
 							</li>
-							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-02.jpg"/></a>
+							<li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-02.jpg'%}"></a>
 								<div class="infor">
 									<p class="item"><a href="#">好沃得低脂牛奶</a></p>
 									<p class="infortext"><a href="#">1L | 为身体补充能量，打造健康</a></p>
 									<p class="buy-btn"><span class="buy-l">￥<span>89</span></span><a href="#">去看看</a></p>
 								</div>
 							</li>
-							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-03.jpg"/></a>
+							<li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-03.jpg'%}"></a>
 								<div class="infor">
 									<p class="item"><a href="#">蒙牛纯甄巴氏杀菌热处理风</a></p>
 									<p class="infortext"><a href="#">200g*24 | 早餐好搭档</a></p>
 									<p class="buy-btn"><span class="buy-l">￥<span>89.9</span></span><a href="#">去看看</a></p>
 								</div>
 							</li>
-							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-04.jpg"/></a>
+							<li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-04.jpg'%}"></a>
 								<div class="infor">
 									<p class="item"><a href="#">特鲜炼奶芝士味饼干</a></p>
 									<p class="infortext"><a href="#">600g*2 | 超大包实惠装，好吃又</a></p>
 									<p class="buy-btn"><span class="buy-l">￥<span>19.8</span></span><a href="#">去看看</a></p>
 								</div>
 							</li>
-							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-05.jpg"/></a>
+							<li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-05.jpg'%}"></a>
 								<div class="infor">
 									<p class="item"><a href="#">Friso美素佳儿金装幼儿配方</a></p>
 									<p class="infortext"><a href="#">900g | 12-36个月宝宝适用</a></p>
 									<p class="buy-btn"><span class="buy-l">￥<span>169</span></span><a href="#">去看看</a></p>
 								</div>
 							</li>
-							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-06.jpg"/></a>
+							<li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-06.jpg'%}"></a>
 								<div class="infor">
 									<p class="item"><a href="#">SUNSIDES 上质脱脂纯牛奶</a></p>
 									<p class="infortext"><a href="#">1L*12 | 法国原装进口</a></p>
 									<p class="buy-btn"><span class="buy-l">￥<span>89</span></span><a href="#">去看看</a></p>
 								</div>
 							</li>
-							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-07.jpg"/></a>
+							<li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-07.jpg'%}"></a>
 								<div class="infor">
 									<p class="item"><a href="#">丝塔芙（Cetaphil）洁面乳</a></p>
 									<p class="infortext"><a href="#">118ml *2瓶 | 便携体验装，温润</a></p>
 									<p class="buy-btn"><span class="buy-l">￥<span>89.9</span></span><a href="#">去看看</a></p>
 								</div>
 							</li>
-							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-08.jpg"/></a>
+							<li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-08.jpg'%}"></a>
 								<div class="infor">
 									<p class="item"><a href="#">CHIVAS芝华士12年苏格兰</a></p>
 									<p class="infortext"><a href="#">700ml | 口感醇和，适合春秋季</a></p>
 									<p class="buy-btn"><span class="buy-l">￥<span>239</span></span><a href="#">去看看</a></p>
 								</div>
-							</li>					
+							</li>
 						</ul>
 						<div class="left-btn">
-							
+
 						</div>
 						<div class="right-btn">
-							
+
 						</div>
 					</div>
 				</div>
 				<div class="feature-wrap width">
-					<h2 class="parttit" style="color: #000;">我买特色<img src="img/indeximg/msg-02.jpg"/></h2>
+					<h2 class="parttit" style="color: #000;">我买特色<img src="{% static 'index/img/indeximg/msg-02.jpg'%}"></h2>
 					<div class="feature clearfix">
 						<div class="ad1 fl">
-							<a href="#"><img src="img/indeximg/feature-01.jpg"/></a>
+							<a href="#"><img src="{% static 'index/img/indeximg/feature-01.jpg'%}"></a>
 						</div>
 						<div class="ad2 fl">
 							<div class="ad2-t">
-								<a href="#"><img src="img/indeximg/feature-02.jpg"/></a>
-								<a href="#"><img src="img/indeximg/feature-03.jpg"/></a>
+								<a href="#"><img src="{% static 'index/img/indeximg/feature-02.jpg'%}"></a>
+								<a href="#"><img src="{% static 'index/img/indeximg/feature-03.jpg'%}"></a>
 							</div>
 							<div class="ad2-b">
-								<a href="#"><img src="img/indeximg/feature-04.jpg"/></a>
+								<a href="#"><img src="{% static 'index/img/indeximg/feature-04.jpg'%}"></a>
 							</div>
 						</div>
 						<div class="ad2 fr">
 							<div class="ad2-b">
-								<a href="#"><img src="img/indeximg/feature-05.jpg"/></a>
+								<a href="#"><img src="{% static 'index/img/indeximg/feature-05.jpg'%}"></a>
 							</div>
 							<div class="ad2-t">
-								<a href="#"><img src="img/indeximg/feature-06.jpg"/></a>
-								<a href="#"><img src="img/indeximg/feature-07.jpg"/></a>
+								<a href="#"><img src="{% static 'index/img/indeximg/feature-06.jpg'%}"></a>
+								<a href="#"><img src="{% static 'index/img/indeximg/feature-07.jpg'%}"></a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="groom-wrap width">
-					<h2 class="parttit" style="color: #000;">我买推荐<img src="img/indeximg/msg-01.jpg"/></h2>
+					<h2 class="parttit" style="color: #000;">我买推荐<img src="{% static 'index/img/indeximg/msg-01.jpg'%}"></h2>
 					<div class="groom">
 						<ul>
-							<li><a href="#"><img src="img/indeximg/groom-01.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/groom-02.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/groom-03.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/groom-04.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/groom-05.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/groom-06.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/groom-07.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/groom-08.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/groom-09.jpg"/></a></li>							
+							<li><a href="#"><img src="{% static 'index/img/indeximg/groom-01.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/groom-02.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/groom-03.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/groom-04.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/groom-05.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/groom-06.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/groom-07.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/groom-08.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/groom-09.jpg'%}"></a></li>
 						</ul>
 						<div class="left-btn">
-							
+
 						</div>
 						<div class="right-btn">
-							
+
 						</div>
-					</div>				
+					</div>
 				</div>
 				<div class="floor-wrap width">
 					<div class="floor-ad width clearfix">
 						<ul>
-							<li><a href="#"><img src="img/indeximg/floorad-01.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/floorad-02.jpg"/></a></li>
-							<li><a href="#"><img src="img/indeximg/floorad-03.jpg"/></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/floorad-01.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/floorad-02.jpg'%}"></a></li>
+							<li><a href="#"><img src="{% static 'index/img/indeximg/floorad-03.jpg'%}"></a></li>
 						</ul>
 					</div>
 					<div class="floor01 floor clearfix">
@@ -924,9 +926,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor01-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor01-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -939,42 +941,42 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor01ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor01ban-02.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor01ban-03.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor01ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor01ban-02.jpg"/></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-02.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-03.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-02.jpg'%}"></a></li>
 									</ul>
-									
+
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
-										<a class="add" href="#"><img src="img/indeximg/floor01-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【爆款】菲律宾宿务芒果干</a></p>
 										<p class="price">￥<span>12.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】泰潘丹泰国茉莉香米</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】Arla爱氏晨曦 </a></p>
 										<p class="price">￥<span>59.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】FERRERO </a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】Fan纯果芬橙</a></p>
 										<p class="price">￥<span>49</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】德运 全脂牛奶 纯牛奶</a></p>
 										<p class="price">￥<span>89.9</span></p>
 									</li>
@@ -983,48 +985,48 @@
 							<div class="floor-r-pg1 clearfix" style="display: none;">
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】FRAGATA帆船牌特级初</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【爆款】WONDERFUL万多福美</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】红帽子黄色什 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【爆款】每日坚果 灿烂的微笑牌 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】SWISS MISS瑞士小姐</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】Arla爱氏晨曦</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】VITA COCO唯他可可</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【15包量贩装】韩国原装进口</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor02 floor clearfix">
 <!--						2F-->
@@ -1044,9 +1046,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor02-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor02-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -1059,40 +1061,40 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
-									</ul>									
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-02.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-02.jpg'%}"></a></li>
+									</ul>
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
-										<a class="add" href="#"><img src="img/indeximg/floor02-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
 										<p class="price">￥<span>38.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
 										<p class="price">￥<span>19.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
 										<p class="price">￥<span>28.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
 										<p class="price">￥<span>29.9</span></p>
 									</li>
@@ -1102,48 +1104,48 @@
 <!--								价格未修改-->
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor03 floor clearfix">
 <!--						3F-->
@@ -1163,9 +1165,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor03-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor03-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -1178,38 +1180,38 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor03ban-01.jpg"/></a></li>
-									</ul>									
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor03ban-01.jpg'%}"></a></li>
+									</ul>
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
 						<!--				价格文字说明未修改-->
-										<a class="add" href="#"><img src="img/indeximg/floor03-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
 										<p class="price">￥<span>38.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
 										<p class="price">￥<span>19.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
 										<p class="price">￥<span>28.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
 										<p class="price">￥<span>29.9</span></p>
 									</li>
@@ -1219,48 +1221,48 @@
 <!--								价格未修改-->
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor04 floor clearfix">
 <!--						4F-->
@@ -1280,9 +1282,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor04-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor04-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -1295,38 +1297,38 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor04ban-01.jpg"/></a></li>
-									</ul>									
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor04ban-01.jpg'%}"></a></li>
+									</ul>
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
 						<!--				价格文字说明未修改-->
-										<a class="add" href="#"><img src="img/indeximg/floor04-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
 										<p class="price">￥<span>38.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
 										<p class="price">￥<span>19.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
 										<p class="price">￥<span>28.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
 										<p class="price">￥<span>29.9</span></p>
 									</li>
@@ -1336,48 +1338,48 @@
 <!--								价格未修改-->
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor05 floor clearfix">
 <!--						5F-->
@@ -1397,9 +1399,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor05-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor05-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -1412,42 +1414,42 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-									</ul>									
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+									</ul>
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
 						<!--				价格文字说明未修改-->
-										<a class="add" href="#"><img src="img/indeximg/floor05-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
 										<p class="price">￥<span>38.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
 										<p class="price">￥<span>19.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
 										<p class="price">￥<span>28.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
 										<p class="price">￥<span>29.9</span></p>
 									</li>
@@ -1457,48 +1459,48 @@
 <!--								价格未修改-->
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor01 floor clearfix">
 <!--						6F-->
@@ -1518,9 +1520,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor01-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor01-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -1533,42 +1535,42 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor01ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor01ban-02.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor01ban-03.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor01ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor01ban-02.jpg"/></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-02.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-03.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor01ban-02.jpg'%}"></a></li>
 									</ul>
-									
+
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
-										<a class="add" href="#"><img src="img/indeximg/floor01-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【爆款】菲律宾宿务芒果干</a></p>
 										<p class="price">￥<span>12.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】泰潘丹泰国茉莉香米</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】Arla爱氏晨曦 </a></p>
 										<p class="price">￥<span>59.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】FERRERO </a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】Fan纯果芬橙</a></p>
 										<p class="price">￥<span>49</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】德运 全脂牛奶 纯牛奶</a></p>
 										<p class="price">￥<span>89.9</span></p>
 									</li>
@@ -1577,48 +1579,48 @@
 							<div class="floor-r-pg1 clearfix" style="display: none;">
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】FRAGATA帆船牌特级初</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【爆款】WONDERFUL万多福美</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】红帽子黄色什 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【爆款】每日坚果 灿烂的微笑牌 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】SWISS MISS瑞士小姐</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【中粮海外直采】Arla爱氏晨曦</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】VITA COCO唯他可可</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor01-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor01-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【15包量贩装】韩国原装进口</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor05 floor clearfix">
 <!--						7F-->
@@ -1638,9 +1640,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor05-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor05-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -1653,42 +1655,42 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
-									</ul>									
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor05ban-01.jpg'%}"></a></li>
+									</ul>
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
 						<!--				价格文字说明未修改-->
-										<a class="add" href="#"><img src="img/indeximg/floor05-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
 										<p class="price">￥<span>38.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
 										<p class="price">￥<span>19.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
 										<p class="price">￥<span>28.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
 										<p class="price">￥<span>29.9</span></p>
 									</li>
@@ -1698,48 +1700,48 @@
 <!--								价格未修改-->
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor05-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor05-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor03 floor clearfix">
 <!--						8F-->
@@ -1759,9 +1761,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor03-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor03-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -1774,38 +1776,38 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor03ban-01.jpg"/></a></li>
-									</ul>									
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor03ban-01.jpg'%}"></a></li>
+									</ul>
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
 						<!--				价格文字说明未修改-->
-										<a class="add" href="#"><img src="img/indeximg/floor03-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
 										<p class="price">￥<span>38.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
 										<p class="price">￥<span>19.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
 										<p class="price">￥<span>28.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
 										<p class="price">￥<span>29.9</span></p>
 									</li>
@@ -1815,48 +1817,48 @@
 <!--								价格未修改-->
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor03-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor03-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor02 floor clearfix">
 <!--						9F-->
@@ -1876,9 +1878,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor02-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor02-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -1891,40 +1893,40 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
-									</ul>									
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-02.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-02.jpg'%}"></a></li>
+									</ul>
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
-										<a class="add" href="#"><img src="img/indeximg/floor02-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
 										<p class="price">￥<span>38.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
 										<p class="price">￥<span>19.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
 										<p class="price">￥<span>28.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
 										<p class="price">￥<span>29.9</span></p>
 									</li>
@@ -1934,48 +1936,48 @@
 <!--								价格未修改-->
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor02 floor05 floor clearfix">
 <!--						10F-->
@@ -1995,9 +1997,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor05-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor05-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -2010,40 +2012,40 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
-										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
-									</ul>									
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-02.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-01.jpg'%}"></a></li>
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor02ban-02.jpg'%}"></a></li>
+									</ul>
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
-										<a class="add" href="#"><img src="img/indeximg/floor02-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
 										<p class="price">￥<span>38.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
 										<p class="price">￥<span>19.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
 										<p class="price">￥<span>28.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
 										<p class="price">￥<span>29.9</span></p>
 									</li>
@@ -2053,48 +2055,48 @@
 <!--								价格未修改-->
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor02-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor02-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
+						</div>
 					</div>
 					<div class="floor04 floor clearfix">
 <!--						11F-->
@@ -2114,9 +2116,9 @@
 								</ul>
 								<div class="floor-l-ad">
 									<div class="aimg">
-										<img src="img/indeximg/animation.png"/>
+										<img src="{% static 'index/img/indeximg/animation.png'%}">
 									</div>
-									<a href="#"><img src="img/indeximg/floor04-index.jpg"/></a>
+									<a href="#"><img src="{% static 'index/img/indeximg/floor04-index.jpg'%}"></a>
 								</div>
 							</div>
 						</div>
@@ -2129,38 +2131,38 @@
 								<div class="floor-r-ad">
 									<!--轮播图-->
 									<ul>
-										<li><a href="#"><img src="img/indeximg/floor04ban-01.jpg"/></a></li>
-									</ul>									
+										<li><a href="#"><img src="{% static 'index/img/indeximg/floor04ban-01.jpg'%}"></a></li>
+									</ul>
 								</div>
 								<ul class="detail-wrap">
 									<li class="first">
 						<!--				价格文字说明未修改-->
-										<a class="add" href="#"><img src="img/indeximg/floor04-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
 										<p class="price">￥<span>119</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
 										<p class="price">￥<span>38.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
 										<p class="price">￥<span>19.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
 										<p class="price">￥<span>28.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
 										<p class="price">￥<span>29.9</span></p>
 									</li>
@@ -2170,50 +2172,50 @@
 <!--								价格未修改-->
 								<ul class="detail-wrap">
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-01.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-01.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
 										<p class="price">￥<span>79</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-02.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-02.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
 										<p class="price">￥<span>55.8</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-03.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-03.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-04.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-04.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
 										<p class="price">￥<span>148</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-05.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-05.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
 										<p class="price">￥<span>49.9</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-06.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-06.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
 										<p class="price">￥<span>59</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-07.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-07.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
 										<p class="price">￥<span>89</span></p>
 									</li>
 									<li>
-										<a class="add" href="#"><img src="img/indeximg/floor04-2-08.jpg"/></a>
+										<a class="add" href="#"><img src="{% static 'index/img/indeximg/floor04-2-08.jpg'%}"></a>
 										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
 										<p class="price">￥<span>28.9</span></p>
 									</li>
 								</ul>
 							</div>
-						</div>						
-					</div>									
-				</div>			
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 <!--		尾部导航           -->
@@ -2222,7 +2224,7 @@
 				<li>
 					<h3><a href="#">生鲜蔬果</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-01.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-01.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">国产水果</a></li>
@@ -2239,7 +2241,7 @@
 				<li>
 					<h3><a href="#">进口食品</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-02.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-02.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">进口海外直采</a></li>
@@ -2257,7 +2259,7 @@
 				<li>
 					<h3><a href="#">酒饮冲调</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-03.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-03.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">国产水果</a></li>
@@ -2274,7 +2276,7 @@
 				<li>
 					<h3><a href="#">休闲零食</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-04.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-04.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">国产水果</a></li>
@@ -2291,7 +2293,7 @@
 				<li class="last">
 					<h3><a href="#">粮油副食</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-05.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-05.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">国产水果</a></li>
@@ -2308,7 +2310,7 @@
 				<li>
 					<h3><a href="#">个护百货</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-06.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-06.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">国产水果</a></li>
@@ -2325,7 +2327,7 @@
 				<li>
 					<h3><a href="#">母婴玩具</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-07.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-07.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">国产水果</a></li>
@@ -2342,7 +2344,7 @@
 				<li>
 					<h3><a href="#">产地直送</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-08.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-08.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">国产水果</a></li>
@@ -2359,7 +2361,7 @@
 				<li>
 					<h3><a href="#">自有品牌</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-09.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-09.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">国产水果</a></li>
@@ -2376,7 +2378,7 @@
 				<li class="last">
 					<h3><a href="#">跨境购</a></h3>
 					<div class="infor-img">
-						<a href="#"><img src="img/indeximg/feetnav-10.png"/></a>
+						<a href="#"><img src="{% static 'index/img/indeximg/feetnav-10.png'%}"></a>
 					</div>
 					<ul>
 						<li><a href="#">国产水果</a></li>
@@ -2390,13 +2392,13 @@
 						<li><a href="#">礼品礼券</a></li>
 					</ul>
 				</li>
-			</ul>			
+			</ul>
 		</div>
 <!--		feet 底部-->
 		<div class="feet">
 			<div class="help width clearfix">
 				<ul class="hint-wrap clearfix">
-					<li class="hint">  
+					<li class="hint">
 						<h3><a href="#">新手上路</a></h3>
 						<ul>
 							<li><a href="#">新用户演示</a></li>
@@ -2405,8 +2407,8 @@
 							<li><a href="#">售后服务政策</a></li>
 							<li><a href="#">我买网发票制度</a></li>
 						</ul>
-					</li>   
-					<li class="hint">  
+					</li>
+					<li class="hint">
 						<h3><a href="#">付款方式</a></h3>
 						<ul>
 							<li><a href="#">支付方式</a></li>
@@ -2416,7 +2418,7 @@
 							<li><a href="#">电子礼品卡说明及使用</a></li>
 						</ul>
 					</li>
-					<li class="hint">  
+					<li class="hint">
 						<h3><a href="#">配送信息</a></h3>
 						<ul>
 							<li><a href="#">配送运费信息</a></li>
@@ -2426,7 +2428,7 @@
 							<li><a href="#">用券订单结算说明</a></li>
 						</ul>
 					</li>
-					<li class="hint">  
+					<li class="hint">
 						<h3><a href="#">我买提示</a></h3>
 						<ul>
 							<li><a href="#">新用户演示</a></li>
@@ -2441,11 +2443,11 @@
 					<ul>
 						<li class="fl">
 							<p>微信服务号</p>
-							<img src="img/indeximg/feetapp-01.png"/>
+							<img src="{% static 'index/img/indeximg/feetapp-01.png'%}">
 						</li>
 						<li class="fl">
 							<p>我买网微信</p>
-							<img src="img/indeximg/feetapp-02.png"/>
+							<img src="{% static 'index/img/indeximg/feetapp-02.png'%}">
 						</li>
 					</ul>
 				</div>
@@ -2463,11 +2465,11 @@
 						<span>|</span>
 						<a href="#">免责条款</a>
 						<span>|</span>
-						<a href="#">客户电话：400-005-5678</a>					
+						<a href="#">客户电话：400-005-5678</a>
 					</div>
 					<div class="feeter clearfix width">
 						<div class="feet-logo fl">
-							<a href="#"><img src="img/indeximg/feetlogo.jpg"/></a>
+							<a href="#"><img src="{% static 'index/img/indeximg/feetlogo.jpg'%}"></a>
 						</div>
 						<div class="feettext fl">
 							<p>Copyright©2009-2017 womai.com.hk All Rights Reserved 中粮海优（北京）有限公司版权所有</p>
@@ -2486,13 +2488,13 @@
 		<div class="header clearfix ztop">
 			<div class="width">
 				<div class="logo fl">
-					<a href="#"><img src="img/indeximg/logo.jpg"/></a>
+					<a href="#"><img src="{% static 'index/img/indeximg/logo.jpg'%}"></a>
 				</div>
 				<div class="search-wrap fl">
 					<div class="search-l fl">
-						<div class="btn">					
+						<div class="btn">
 						</div>
-						<input class="fl" type="text" name="" id="" placeholder="礼盒" />
+						<input class="fl" type="text" name="" id="" placeholder="礼盒">
 						<button class="search-btn fl">搜索</button>
 					</div>
 				</div>
@@ -2534,7 +2536,7 @@
 					<li><span>在线充值</span>
 						<em style="background: url(img/indeximg/cart.jpg) no-repeat -68px 0;"></em>
 					</li>
-					<li><span class="diff"><a href="#"><img src="img/indeximg/toolcode.jpg"/></a></span>
+					<li><span class="diff"><a href="#"><img src="{% static 'index/img/indeximg/toolcode.jpg'%}"></a></span>
 						<em style="background: url(img/indeximg/cart.jpg) no-repeat -102px 0;"></em>
 					</li>
 					<li id="return_top"><span>顶部</span>
@@ -2543,5 +2545,9 @@
 				</ul>
 			</div>
 		</div>
-	</body>
+
+
+my_buy.js:9:9
+
+    </body>
 </html>
