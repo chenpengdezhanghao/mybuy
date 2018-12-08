@@ -1,0 +1,2547 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>中粮我买网</title>
+		<script src="{% static 'index/js/jquery-1.12.3.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'index/js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'index/js/index.js' %}" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'index/css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'index/css/index.css' %}"/>
+	</head>
+	<body>
+		<div class="ad_top">
+			<a href="#"><img src="img/indeximg/banner-top.jpg"/></a>
+		</div>
+		<div class="top_nav_wrap">
+			<div class="top_nav width clearfix">
+				<ul class="nav-l float">
+					<li class="float"><p><span>当前城市：</span><span id="city">北京</span><i class="arrow_down"></i></p></li>
+				</ul>
+				<ul class="nav-m fl">
+					<li class="float">欢迎您！</li>
+					<li class="float"><a class="log" style="color:#8cb91e" href="#">登录</a></li>
+					<li class="float"><a class="reg" href="#">注册</a></li>
+				</ul>
+				<ul class="nav-r" style="margin-right: 10px;">
+					<li class="fl own"><p><a href="#"><span class="text">我的账户<i></i></span></a></p>
+						<div class="mycount">
+							<p><span>您还没有登录</span><a style="color:#8cb91e" href="#" class="log">登录</a></p>
+							<ul>
+								<li><a href="#">待付款订单</a></li>
+								<li><a href="#">我的消息</a></li>
+								<li><a href="#">待签收订单</a></li>
+								<li><a href="#">我的订单</a></li>
+								<li><a href="#">支付卡账户</a></li>
+								<li><a href="#">我的积分</a></li>
+								<li><a href="#">优惠券/团购卡</a></li>
+								<li><a href="#">我的收藏</a></li>
+								<li><a href="#">电子礼品卡</a></li>
+								<li><a href="#">兑 换 券</a></li>
+							</ul>
+						</div>	
+					</li>
+					<li class="cart fl"><p><a href="#"><span class="text">购物车<b>0</b>件</span></a></p></li>
+					<li class="line float">|</li>
+					<li class="float own"><p><a href="#"><span class="text">客户服务<i></i></span></a></p>
+						<div class="mycount consumer">
+							<ul>
+								<li><a href="#">帮助中心</a></li>
+								<li><a href="#">新手上路</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="line float">|</li>
+					<li class="float"><p><a href="#"><span class="text">大客户</span></a></p></li>
+					<li class="line float">|</li>
+					<li class="fr"><a href="#"><span class="icbc"></span></a><a href="#"><span class="zhxin"></span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix">
+			<div class="width">
+				<div class="logo fl">
+					<a href="#"><img src="img/indeximg/logo.jpg"/></a>
+				</div>
+				<div class="ad_header fl">
+					<a href="#"><img src="img/indeximg/ad01.jpg"/></a>
+				</div>
+				<div class="search-wrap fl">
+					<div class="search-l fl">
+						<div class="btn">					
+						</div>
+						<input class="fl" type="text" name="" id="" placeholder="回家过节 吃点好的 进口零食坚果低至59.9" />
+						<button class="search-btn fl">搜索</button>
+					</div>
+					<div class="search-r fl">
+						<a href="#">高级<br/>搜索</a>
+					</div>
+					<div class="search-b">
+						<a href="#">月饼</a>
+						<a href="#">大米</a>
+						<a href="#">牛奶</a>
+						<a href="#">牛排</a>
+						<a href="#">坚果礼盒</a>
+						<a href="#">大闸蟹</a>
+					</div>
+				</div>
+				<div class="app fr">
+					<img src="img/indeximg/appcode.jpg"/>
+				</div>
+			</div>
+		</div>
+		<!--content begin 所有商品-->
+		<div class="main-nav-wrap">
+			<div class="main-nav width">
+				<div class="allkinds">
+					<h2>全部商品分类</h2>
+					<ul class="list">
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list01.png);"></b><a class="kind" href="#">肉禽水产</a><a class="kind" href="#">水果蔬菜</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">精品水果<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">海鲜水产<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">精品蔬菜<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">低温饮品<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">精选主食<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>								
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list02.png);"></b><a class="kind" href="#">进口生鲜</a><a class="kind" href="#">进口水果</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">进口生鲜<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">进口水果<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>							
+									</div>
+								</div>							
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list03.png);"></b><a class="kind" href="#">进口食品</a><a class="kind" href="#">进口直采</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">进口奶粉<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">进口糕点<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">进口零食<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">进口饮料<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">进口餐厨<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">进口酒<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">进口直购<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>								
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list04.png);"></b><a class="kind" href="#">酒</a><a class="kind" href="#">饮料/冲调</a><a class="kind" href="#">茶</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">白酒<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">葡萄酒<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">啤酒<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">保健酒<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">咖啡<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">茶<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>							
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list05.png);"></b><a class="kind" href="#">休闲零食</a><a class="kind" href="#">地方特产</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">坚果炒货<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">休闲零食<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">饼干蛋糕<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">糖果千克力<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">地方特产<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>								
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list06.png);"></b><a class="kind" href="#">营养健康</a><a class="kind" href="#">奶制品</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">营养健康<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">营养成分<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">滋养补生<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">常温补品<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>							
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list07.png);"></b><a class="kind" href="#">粮油副食</a><a class="kind" href="#">调味干货</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">食用油<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">玉米杂粮<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">南北干货<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">调味品<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">油量礼盒<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">有机食品<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>								
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list08.png);"></b><a class="kind" href="#">母婴食品</a><a class="kind" href="#">母婴用品</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">孕婴奶粉<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">婴童辅食<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">婴童营养<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">喂养用品<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">尿裤湿巾<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">婴童清洁<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">孩车童车<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>								
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list09.png);"></b><a class="kind" href="#">个护美妆</a><a class="kind" href="#">家用清洁</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">个人护理<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">美容美妆<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">生活用品<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>								
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list10.png);"></b><a class="kind" href="#">厨具家纺</a><a class="kind" href="#">家电3C</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">出具及配件<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">家纺<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">厨房电器<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">生活电器<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+										<h4 class="sub-title"><a href="#">3C智能<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>								
+							</div>
+						</li>
+						<li class="kinds">
+							<h3><b style="background: url(img/indeximg/list11.png);"></b><a class="kind" href="#">礼卡礼券</a></h3>
+							<div class="sub-kinds">
+								<div class="kind-box">
+									<div class="c-kind">
+										<h4 class="sub-title"><a href="#">海鲜礼品卡券<i class="hide-png"></i></a></h4>
+										<ul class="sub-count">
+											<li class="sub-kind"><a href="#">樱桃</a></li>
+											<li class="sub-kind"><a href="#">奇异果</a></li>
+											<li class="sub-kind"><a href="#">橙子</a></li>
+											<li class="sub-kind"><a href="#">苹果</a></li>
+											<li class="sub-kind"><a href="#">热带水果</a></li>
+											<li class="sub-kind"><a href="#">葡萄提子</a></li>
+											<li class="sub-kind"><a href="#">瓜</a></li>
+											<li class="sub-kind"><a href="#">芒果</a></li>
+										</ul>
+									</div>
+								</div>								
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="nav-im">
+					<ul >
+						<li><a href="#">团购</a></li>
+						<li><a href="#">每日鲜</a></li>
+						<li><a href="#">我买酒</a></li>
+						<li><a href="#">中粮出品</a></li>
+						<li><a href="#">安心享</a></li>
+						<li><a href="#">包邮直送</a></li>
+						<li><a href="#">全球购</a></li>
+					</ul>
+				</div>
+				<div class="mincart">
+					<div class="cart-btn">
+						<span class="cart-look">
+							<i>0</i>
+						</span>
+						<span class="text">
+							<a href="#">购物车</a>
+						</span>
+						<span class="arrow">
+							
+						</span>
+					</div>
+					<div class="min-cart">
+						<div class="free">
+							<span>
+								<img src="img/indeximg/cart-no.jpg"/>
+							</span>
+							<p>
+								购物车中还没有商品，赶紧选购吧！<a href="#">去首页看看</a>
+							</p>
+						</div>
+						<div id="small_cart">
+							<h3>最近加入的商品</h3>
+							<div class="item-wrap">
+								<ul class="item-list">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="width">
+			
+		</div>
+		<div class="banner-wrap">
+			<div class="width">
+				<div class="banner fl">
+					<ul class="bgimg">
+					</ul>
+					<ul id="mark">
+					</ul>
+					<div id="prer">
+						
+					</div>
+					<div id="next">
+						
+					</div>
+				</div>
+				<div class="banner-r fl">
+					<div class="msg">
+						<ul class="title">
+							<li class="current">服务公告</li>
+							<li>卡券专栏</li>
+							<li>VIP通道</li>
+						</ul>
+						<ul class="cont-wrap">
+							<li class="cont">
+								<ul>
+									<li><a href="#"><span></span><b>包邮直送及全球购频道...</b></a></li>						    
+									<li><a href="#"><span></span><b>武汉站及安徽站配送延...</b></a></li>
+									<li><a href="#"><span></span><b>翼支付满39元随机立减...</b></a></li>
+								</ul>
+							</li>
+							<li class="cont" style="display: none;">
+								<ul>
+									<li><a href="#"><span></span><b>上海肯德基活动小提示...</b></a></li>						    
+									<li><a href="#"><span></span><b>注册送劵活动单品折扣...</b></a></li>
+									<li><a href="#"><span></span><b>网络申请民生信用卡，...</b></a></li>
+								</ul>
+							</li>
+							<li class="cont" style="display: none;">
+								<ul >
+									<li><a href="#"><span></span><b>2016年4月VIP会员专享...</b></a></li>						    
+									<li><a href="#"><span></span><b>2016年3月VIP 会员专享...</b></a></li>
+									<li><a href="#"><span></span><b>2016年2月VIP会员专享...</b></a></li>
+								</ul>							
+							</li>
+													
+						</ul>
+						<div class="app-wrap">
+							<ul class="phapp">
+								<li><a href="#"><img src="img/indeximg/appicon-01.png"/></a></li>
+								<li><a href="#"><img src="img/indeximg/appicon-02.png"/></a></li>
+								<li><a href="#"><img src="img/indeximg/appicon-03.png"/></a></li>
+								<li><a href="#"><img src="img/indeximg/appicon-04.png"/></a></li>
+								<li><a href="#"><img src="img/indeximg/appicon-05.png"/></a></li>
+								<li><a href="#"><img src="img/indeximg/appicon-06.png"/></a></li>
+								<li><a href="#"><img src="img/indeximg/appicon-07.png"/></a></li>
+								<li><a href="#"><img src="img/indeximg/appicon-08.png"/></a></li>
+								<li><a href="#"><img src="img/indeximg/appicon-09.png"/></a></li>
+							</ul>
+							<div class="app-ad">
+								<a href="#"><img src="img/indeximg/appad.png"/></a>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!--主体 item-->
+		<div class="main-wrap">
+			<div class="main width">
+				<h2 class="parttit"><a href="#">每日劲爆品</a><img src="img/indeximg/msg-01.jpg"/></h2>
+				<div class="madden clearfix">				
+					<div class="madden-l">
+						<div class="aimg">
+							<img src="img/indeximg/animation.png"/>
+						</div>
+						<a href="#"><img src="img/indeximg/madden-in.jpg"/></a>
+					</div>
+					<div class="madlist-wrap">
+						<ul class="madlist">
+							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-01.jpg"/></a>
+								<div class="infor">
+									<p class="item"><a href="#">维多丽白肉蜜柚2粒礼盒装</a></p>
+									<p class="infortext"><a href="#">2.4-2.8kg | 肉清甜,水分含量适</a></p>
+									<p class="buy-btn"><span class="buy-l">￥<span>29.9</span></span><a href="#">去看看</a></p>
+								</div>
+							</li>
+							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-02.jpg"/></a>
+								<div class="infor">
+									<p class="item"><a href="#">好沃得低脂牛奶</a></p>
+									<p class="infortext"><a href="#">1L | 为身体补充能量，打造健康</a></p>
+									<p class="buy-btn"><span class="buy-l">￥<span>89</span></span><a href="#">去看看</a></p>
+								</div>
+							</li>
+							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-03.jpg"/></a>
+								<div class="infor">
+									<p class="item"><a href="#">蒙牛纯甄巴氏杀菌热处理风</a></p>
+									<p class="infortext"><a href="#">200g*24 | 早餐好搭档</a></p>
+									<p class="buy-btn"><span class="buy-l">￥<span>89.9</span></span><a href="#">去看看</a></p>
+								</div>
+							</li>
+							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-04.jpg"/></a>
+								<div class="infor">
+									<p class="item"><a href="#">特鲜炼奶芝士味饼干</a></p>
+									<p class="infortext"><a href="#">600g*2 | 超大包实惠装，好吃又</a></p>
+									<p class="buy-btn"><span class="buy-l">￥<span>19.8</span></span><a href="#">去看看</a></p>
+								</div>
+							</li>
+							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-05.jpg"/></a>
+								<div class="infor">
+									<p class="item"><a href="#">Friso美素佳儿金装幼儿配方</a></p>
+									<p class="infortext"><a href="#">900g | 12-36个月宝宝适用</a></p>
+									<p class="buy-btn"><span class="buy-l">￥<span>169</span></span><a href="#">去看看</a></p>
+								</div>
+							</li>
+							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-06.jpg"/></a>
+								<div class="infor">
+									<p class="item"><a href="#">SUNSIDES 上质脱脂纯牛奶</a></p>
+									<p class="infortext"><a href="#">1L*12 | 法国原装进口</a></p>
+									<p class="buy-btn"><span class="buy-l">￥<span>89</span></span><a href="#">去看看</a></p>
+								</div>
+							</li>
+							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-07.jpg"/></a>
+								<div class="infor">
+									<p class="item"><a href="#">丝塔芙（Cetaphil）洁面乳</a></p>
+									<p class="infortext"><a href="#">118ml *2瓶 | 便携体验装，温润</a></p>
+									<p class="buy-btn"><span class="buy-l">￥<span>89.9</span></span><a href="#">去看看</a></p>
+								</div>
+							</li>
+							<li><a class="changeimg" href="#"><img src="img/indeximg/mad-08.jpg"/></a>
+								<div class="infor">
+									<p class="item"><a href="#">CHIVAS芝华士12年苏格兰</a></p>
+									<p class="infortext"><a href="#">700ml | 口感醇和，适合春秋季</a></p>
+									<p class="buy-btn"><span class="buy-l">￥<span>239</span></span><a href="#">去看看</a></p>
+								</div>
+							</li>					
+						</ul>
+						<div class="left-btn">
+							
+						</div>
+						<div class="right-btn">
+							
+						</div>
+					</div>
+				</div>
+				<div class="feature-wrap width">
+					<h2 class="parttit" style="color: #000;">我买特色<img src="img/indeximg/msg-02.jpg"/></h2>
+					<div class="feature clearfix">
+						<div class="ad1 fl">
+							<a href="#"><img src="img/indeximg/feature-01.jpg"/></a>
+						</div>
+						<div class="ad2 fl">
+							<div class="ad2-t">
+								<a href="#"><img src="img/indeximg/feature-02.jpg"/></a>
+								<a href="#"><img src="img/indeximg/feature-03.jpg"/></a>
+							</div>
+							<div class="ad2-b">
+								<a href="#"><img src="img/indeximg/feature-04.jpg"/></a>
+							</div>
+						</div>
+						<div class="ad2 fr">
+							<div class="ad2-b">
+								<a href="#"><img src="img/indeximg/feature-05.jpg"/></a>
+							</div>
+							<div class="ad2-t">
+								<a href="#"><img src="img/indeximg/feature-06.jpg"/></a>
+								<a href="#"><img src="img/indeximg/feature-07.jpg"/></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="groom-wrap width">
+					<h2 class="parttit" style="color: #000;">我买推荐<img src="img/indeximg/msg-01.jpg"/></h2>
+					<div class="groom">
+						<ul>
+							<li><a href="#"><img src="img/indeximg/groom-01.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/groom-02.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/groom-03.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/groom-04.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/groom-05.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/groom-06.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/groom-07.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/groom-08.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/groom-09.jpg"/></a></li>							
+						</ul>
+						<div class="left-btn">
+							
+						</div>
+						<div class="right-btn">
+							
+						</div>
+					</div>				
+				</div>
+				<div class="floor-wrap width">
+					<div class="floor-ad width clearfix">
+						<ul>
+							<li><a href="#"><img src="img/indeximg/floorad-01.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/floorad-02.jpg"/></a></li>
+							<li><a href="#"><img src="img/indeximg/floorad-03.jpg"/></a></li>
+						</ul>
+					</div>
+					<div class="floor01 floor clearfix">
+<!--						1F-->
+						<div class="floor-l fl">
+							<h3><i></i>进口食品</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									1F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor01icon-01.png) no-repeat;"></i><a href="#">牛奶乳品</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-02.png) no-repeat;"></i><a href="#">零食膨化</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-03.png) no-repeat;"></i><a href="#">坚果果干</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-04.png) no-repeat;"></i><a href="#">饮料及水</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-05.png) no-repeat;"></i><a href="#">饼干糕点</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-06.png) no-repeat;"></i><a href="#">进口餐厨</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor01-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor01ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor01ban-02.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor01ban-03.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor01ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor01ban-02.jpg"/></a></li>
+									</ul>
+									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+										<a class="add" href="#"><img src="img/indeximg/floor01-01.jpg"/></a>
+										<p class="trans"><a href="#">【爆款】菲律宾宿务芒果干</a></p>
+										<p class="price">￥<span>12.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】泰潘丹泰国茉莉香米</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-03.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】Arla爱氏晨曦 </a></p>
+										<p class="price">￥<span>59.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-04.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】FERRERO </a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-05.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】Fan纯果芬橙</a></p>
+										<p class="price">￥<span>49</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】德运 全脂牛奶 纯牛奶</a></p>
+										<p class="price">￥<span>89.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】FRAGATA帆船牌特级初</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【爆款】WONDERFUL万多福美</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】红帽子黄色什 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【爆款】每日坚果 灿烂的微笑牌 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】SWISS MISS瑞士小姐</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】Arla爱氏晨曦</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】VITA COCO唯他可可</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【15包量贩装】韩国原装进口</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor02 floor clearfix">
+<!--						2F-->
+						<div class="floor-l fl">
+							<h3><i></i>生鲜日配</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									2F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor02icon-01.png) no-repeat;"></i><a href="#">螃蟹类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-02.png) no-repeat;"></i><a href="#">鱼类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-03.png) no-repeat;"></i><a href="#">进口肉类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-04.png) no-repeat;"></i><a href="#">国产肉类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-05.png) no-repeat;"></i><a href="#">低温奶</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-06.png) no-repeat;"></i><a href="#">主食</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor02-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
+									</ul>									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+										<a class="add" href="#"><img src="img/indeximg/floor02-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
+										<p class="price">￥<span>38.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-04.jpg"/></a>
+										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
+										<p class="price">￥<span>19.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
+										<p class="price">￥<span>28.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
+										<p class="price">￥<span>29.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+<!--								价格未修改-->
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor03 floor clearfix">
+<!--						3F-->
+						<div class="floor-l fl">
+							<h3><i></i>时令果蔬</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									3F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor03icon-01.png) no-repeat;"></i><a href="#">苹果</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-02.png) no-repeat;"></i><a href="#">橙子</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-03.png) no-repeat;"></i><a href="#">热带水果</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-04.png) no-repeat;"></i><a href="#">进口水果</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-05.png) no-repeat;"></i><a href="#">国产水果</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-06.png) no-repeat;"></i><a href="#">蔬菜</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor03-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor03ban-01.jpg"/></a></li>
+									</ul>									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+						<!--				价格文字说明未修改-->
+										<a class="add" href="#"><img src="img/indeximg/floor03-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
+										<p class="price">￥<span>38.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-04.jpg"/></a>
+										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
+										<p class="price">￥<span>19.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
+										<p class="price">￥<span>28.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
+										<p class="price">￥<span>29.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+<!--								价格未修改-->
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor04 floor clearfix">
+<!--						4F-->
+						<div class="floor-l fl">
+							<h3><i></i>奶制品</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									4F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor04icon-01.png) no-repeat;"></i><a href="#">纯牛奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-02.png) no-repeat;"></i><a href="#">酸奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-03.png) no-repeat;"></i><a href="#">有机奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-04.png) no-repeat;"></i><a href="#">儿童奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-05.png) no-repeat;"></i><a href="#">风味奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-06.png) no-repeat;"></i><a href="#">功能奶</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor04-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor04ban-01.jpg"/></a></li>
+									</ul>									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+						<!--				价格文字说明未修改-->
+										<a class="add" href="#"><img src="img/indeximg/floor04-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
+										<p class="price">￥<span>38.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-04.jpg"/></a>
+										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
+										<p class="price">￥<span>19.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
+										<p class="price">￥<span>28.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
+										<p class="price">￥<span>29.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+<!--								价格未修改-->
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor05 floor clearfix">
+<!--						5F-->
+						<div class="floor-l fl">
+							<h3><i></i>休闲保健</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									5F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor05icon-01.png) no-repeat;"></i><a href="#">坚果炒货</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-02.png) no-repeat;"></i><a href="#">肉铺蜜饯</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-03.png) no-repeat;"></i><a href="#">休闲零食</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-04.png) no-repeat;"></i><a href="#">饼干蛋糕</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-05.png) no-repeat;"></i><a href="#">糖果巧克力</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-06.png) no-repeat;"></i><a href="#">营养保健</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor05-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+									</ul>									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+						<!--				价格文字说明未修改-->
+										<a class="add" href="#"><img src="img/indeximg/floor05-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
+										<p class="price">￥<span>38.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-04.jpg"/></a>
+										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
+										<p class="price">￥<span>19.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
+										<p class="price">￥<span>28.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
+										<p class="price">￥<span>29.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+<!--								价格未修改-->
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor01 floor clearfix">
+<!--						6F-->
+						<div class="floor-l fl">
+							<h3><i></i>酒饮冲调茶叶</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									6F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor01icon-01.png) no-repeat;"></i><a href="#">牛奶乳品</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-02.png) no-repeat;"></i><a href="#">零食膨化</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-03.png) no-repeat;"></i><a href="#">坚果果干</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-04.png) no-repeat;"></i><a href="#">饮料及水</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-05.png) no-repeat;"></i><a href="#">饼干糕点</a></li>
+									<li><i style="background: url(img/indeximg/floor01icon-06.png) no-repeat;"></i><a href="#">进口餐厨</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor01-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor01ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor01ban-02.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor01ban-03.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor01ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor01ban-02.jpg"/></a></li>
+									</ul>
+									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+										<a class="add" href="#"><img src="img/indeximg/floor01-01.jpg"/></a>
+										<p class="trans"><a href="#">【爆款】菲律宾宿务芒果干</a></p>
+										<p class="price">￥<span>12.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】泰潘丹泰国茉莉香米</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-03.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】Arla爱氏晨曦 </a></p>
+										<p class="price">￥<span>59.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-04.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】FERRERO </a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-05.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】Fan纯果芬橙</a></p>
+										<p class="price">￥<span>49</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】德运 全脂牛奶 纯牛奶</a></p>
+										<p class="price">￥<span>89.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】FRAGATA帆船牌特级初</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【爆款】WONDERFUL万多福美</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】红帽子黄色什 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【爆款】每日坚果 灿烂的微笑牌 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】SWISS MISS瑞士小姐</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【中粮海外直采】Arla爱氏晨曦</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】VITA COCO唯他可可</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor01-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【15包量贩装】韩国原装进口</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor05 floor clearfix">
+<!--						7F-->
+						<div class="floor-l fl">
+							<h3><i></i>粮油副食</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									7F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor05icon-01.png) no-repeat;"></i><a href="#">坚果炒货</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-02.png) no-repeat;"></i><a href="#">肉铺蜜饯</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-03.png) no-repeat;"></i><a href="#">休闲零食</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-04.png) no-repeat;"></i><a href="#">饼干蛋糕</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-05.png) no-repeat;"></i><a href="#">糖果巧克力</a></li>
+									<li><i style="background: url(img/indeximg/floor05icon-06.png) no-repeat;"></i><a href="#">营养保健</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor05-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor05ban-01.jpg"/></a></li>
+									</ul>									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+						<!--				价格文字说明未修改-->
+										<a class="add" href="#"><img src="img/indeximg/floor05-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
+										<p class="price">￥<span>38.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-04.jpg"/></a>
+										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
+										<p class="price">￥<span>19.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
+										<p class="price">￥<span>28.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
+										<p class="price">￥<span>29.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+<!--								价格未修改-->
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor05-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor03 floor clearfix">
+<!--						8F-->
+						<div class="floor-l fl">
+							<h3><i></i>母婴玩具</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									8F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor03icon-01.png) no-repeat;"></i><a href="#">苹果</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-02.png) no-repeat;"></i><a href="#">橙子</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-03.png) no-repeat;"></i><a href="#">热带水果</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-04.png) no-repeat;"></i><a href="#">进口水果</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-05.png) no-repeat;"></i><a href="#">国产水果</a></li>
+									<li><i style="background: url(img/indeximg/floor03icon-06.png) no-repeat;"></i><a href="#">蔬菜</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor03-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor03ban-01.jpg"/></a></li>
+									</ul>									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+						<!--				价格文字说明未修改-->
+										<a class="add" href="#"><img src="img/indeximg/floor03-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
+										<p class="price">￥<span>38.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-04.jpg"/></a>
+										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
+										<p class="price">￥<span>19.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
+										<p class="price">￥<span>28.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
+										<p class="price">￥<span>29.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+<!--								价格未修改-->
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor03-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor02 floor clearfix">
+<!--						9F-->
+						<div class="floor-l fl">
+							<h3><i></i>个护清洁</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									9F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor02icon-01.png) no-repeat;"></i><a href="#">螃蟹类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-02.png) no-repeat;"></i><a href="#">鱼类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-03.png) no-repeat;"></i><a href="#">进口肉类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-04.png) no-repeat;"></i><a href="#">国产肉类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-05.png) no-repeat;"></i><a href="#">低温奶</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-06.png) no-repeat;"></i><a href="#">主食</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor02-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
+									</ul>									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+										<a class="add" href="#"><img src="img/indeximg/floor02-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
+										<p class="price">￥<span>38.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-04.jpg"/></a>
+										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
+										<p class="price">￥<span>19.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
+										<p class="price">￥<span>28.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
+										<p class="price">￥<span>29.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+<!--								价格未修改-->
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor02 floor05 floor clearfix">
+<!--						10F-->
+						<div class="floor-l fl">
+							<h3><i></i>家电家具</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									10F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor02icon-01.png) no-repeat;"></i><a href="#">螃蟹类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-02.png) no-repeat;"></i><a href="#">鱼类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-03.png) no-repeat;"></i><a href="#">进口肉类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-04.png) no-repeat;"></i><a href="#">国产肉类</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-05.png) no-repeat;"></i><a href="#">低温奶</a></li>
+									<li><i style="background: url(img/indeximg/floor02icon-06.png) no-repeat;"></i><a href="#">主食</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor05-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor02ban-01.jpg"/></a></li>
+										<li><a href="#"><img src="img/indeximg/floor02ban-02.jpg"/></a></li>
+									</ul>									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+										<a class="add" href="#"><img src="img/indeximg/floor02-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
+										<p class="price">￥<span>38.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-04.jpg"/></a>
+										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
+										<p class="price">￥<span>19.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
+										<p class="price">￥<span>28.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
+										<p class="price">￥<span>29.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+<!--								价格未修改-->
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor02-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>
+					<div class="floor04 floor clearfix">
+<!--						11F-->
+						<div class="floor-l fl">
+							<h3><i></i>包邮直送   全球购</h3>
+							<div class="floor-ipt">
+								<span class="png">
+									11F
+								</span>
+								<ul>
+									<li><i style="background: url(img/indeximg/floor04icon-01.png) no-repeat;"></i><a href="#">纯牛奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-02.png) no-repeat;"></i><a href="#">酸奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-03.png) no-repeat;"></i><a href="#">有机奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-04.png) no-repeat;"></i><a href="#">儿童奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-05.png) no-repeat;"></i><a href="#">风味奶</a></li>
+									<li><i style="background: url(img/indeximg/floor04icon-06.png) no-repeat;"></i><a href="#">功能奶</a></li>
+								</ul>
+								<div class="floor-l-ad">
+									<div class="aimg">
+										<img src="img/indeximg/animation.png"/>
+									</div>
+									<a href="#"><img src="img/indeximg/floor04-index.jpg"/></a>
+								</div>
+							</div>
+						</div>
+						<div class="floor-r fr">
+							<ul class="tit clearfix">
+								<li class="cur">精选推荐</li>
+								<li>热卖推荐</li>
+							</ul>
+							<div class="floor-r-pg1 clearfix">
+								<div class="floor-r-ad">
+									<!--轮播图-->
+									<ul>
+										<li><a href="#"><img src="img/indeximg/floor04ban-01.jpg"/></a></li>
+									</ul>									
+								</div>
+								<ul class="detail-wrap">
+									<li class="first">
+						<!--				价格文字说明未修改-->
+										<a class="add" href="#"><img src="img/indeximg/floor04-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】大洋世家阿根廷船冻红</a></p>
+										<p class="price">￥<span>119</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家青虾</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮安至选进口猪肋排 </a></p>
+										<p class="price">￥<span>38.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-04.jpg"/></a>
+										<p class="trans"><a href="#">【买一赠一】潮香村原味手抓饼 </a></p>
+										<p class="price">￥<span>19.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】新雅蚝油牛肉(袋装225</a></p>
+										<p class="price">￥<span>28.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营冷藏鲜奶】延世牧场牛奶</a></p>
+										<p class="price">￥<span>29.9</span></p>
+									</li>
+								</ul>
+							</div>
+							<div class="floor-r-pg1 clearfix" style="display: none;">
+<!--								价格未修改-->
+								<ul class="detail-wrap">
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-01.jpg"/></a>
+										<p class="trans"><a href="#">【自营】土叭鸡鸡翅中500g袋装</a></p>
+										<p class="price">￥<span>79</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-02.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮凌鲜·大洋世家加拿</a></p>
+										<p class="price">￥<span>55.8</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-03.jpg"/></a>
+										<p class="trans"><a href="#">【自营】中粮V365鲜鸡蛋10枚 </a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-04.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿安冷冻牛腩1000g 袋 </a></p>
+										<p class="price">￥<span>148</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-05.jpg"/></a>
+										<p class="trans"><a href="#">【自营】品鲜大道智利冰冻三文</a></p>
+										<p class="price">￥<span>49.9</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-06.jpg"/></a>
+										<p class="trans"><a href="#">【自营】如日东升优品鲜鸡蛋10</a></p>
+										<p class="price">￥<span>59</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-07.jpg"/></a>
+										<p class="trans"><a href="#">【自营】鸿轩农业土鸡蛋30枚</a></p>
+										<p class="price">￥<span>89</span></p>
+									</li>
+									<li>
+										<a class="add" href="#"><img src="img/indeximg/floor04-2-08.jpg"/></a>
+										<p class="trans"><a href="#">【自营】徐鸿飞小鲜蛋无添加营</a></p>
+										<p class="price">￥<span>28.9</span></p>
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</div>									
+				</div>			
+			</div>
+		</div>
+<!--		尾部导航           -->
+		<div class="feet-nav-wrap width">
+			<ul class="feet-nav clearfix">
+				<li>
+					<h3><a href="#">生鲜蔬果</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-01.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">国产水果</a></li>
+						<li><a href="#">海鲜水产</a></li>
+						<li><a href="#">生肉禽蛋</a></li>
+						<li><a href="#">蔬菜</a></li>
+						<li><a href="#">低温饮品/饮料</a></li>
+						<li><a href="#">主食</a></li>
+						<li><a href="#">熟食/佐餐</a></li>
+						<li><a href="#">冰激凌</a></li>
+						<li><a href="#">礼品礼券</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3><a href="#">进口食品</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-02.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">进口海外直采</a></li>
+						<li><a href="#"> 进口牛奶/奶粉</a></li>
+						<li><a href="#"> 进口饮料/水</a></li>
+						<li><a href="#">进口咖啡茶叶</a></li>
+						<li><a href="#">进口冲饮果茶</a></li>
+						<li><a href="#"> 进口零食/膨化</a></li>
+						<li><a href="#">进口饼干/糕点</a></li>
+						<li><a href="#">进口糖果/巧克力</a></li>
+						<li><a href="#">进口果干/坚果</a></li>
+						<li><a href="#"> 进口食用油</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3><a href="#">酒饮冲调</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-03.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">国产水果</a></li>
+						<li><a href="#">海鲜水产</a></li>
+						<li><a href="#">生肉禽蛋</a></li>
+						<li><a href="#">蔬菜</a></li>
+						<li><a href="#">低温饮品/饮料</a></li>
+						<li><a href="#">主食</a></li>
+						<li><a href="#">熟食/佐餐</a></li>
+						<li><a href="#">冰激凌</a></li>
+						<li><a href="#">礼品礼券</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3><a href="#">休闲零食</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-04.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">国产水果</a></li>
+						<li><a href="#">海鲜水产</a></li>
+						<li><a href="#">生肉禽蛋</a></li>
+						<li><a href="#">蔬菜</a></li>
+						<li><a href="#">低温饮品/饮料</a></li>
+						<li><a href="#">主食</a></li>
+						<li><a href="#">熟食/佐餐</a></li>
+						<li><a href="#">冰激凌</a></li>
+						<li><a href="#">礼品礼券</a></li>
+					</ul>
+				</li>
+				<li class="last">
+					<h3><a href="#">粮油副食</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-05.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">国产水果</a></li>
+						<li><a href="#">海鲜水产</a></li>
+						<li><a href="#">生肉禽蛋</a></li>
+						<li><a href="#">蔬菜</a></li>
+						<li><a href="#">低温饮品/饮料</a></li>
+						<li><a href="#">主食</a></li>
+						<li><a href="#">熟食/佐餐</a></li>
+						<li><a href="#">冰激凌</a></li>
+						<li><a href="#">礼品礼券</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3><a href="#">个护百货</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-06.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">国产水果</a></li>
+						<li><a href="#">海鲜水产</a></li>
+						<li><a href="#">生肉禽蛋</a></li>
+						<li><a href="#">蔬菜</a></li>
+						<li><a href="#">低温饮品/饮料</a></li>
+						<li><a href="#">主食</a></li>
+						<li><a href="#">熟食/佐餐</a></li>
+						<li><a href="#">冰激凌</a></li>
+						<li><a href="#">礼品礼券</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3><a href="#">母婴玩具</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-07.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">国产水果</a></li>
+						<li><a href="#">海鲜水产</a></li>
+						<li><a href="#">生肉禽蛋</a></li>
+						<li><a href="#">蔬菜</a></li>
+						<li><a href="#">低温饮品/饮料</a></li>
+						<li><a href="#">主食</a></li>
+						<li><a href="#">熟食/佐餐</a></li>
+						<li><a href="#">冰激凌</a></li>
+						<li><a href="#">礼品礼券</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3><a href="#">产地直送</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-08.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">国产水果</a></li>
+						<li><a href="#">海鲜水产</a></li>
+						<li><a href="#">生肉禽蛋</a></li>
+						<li><a href="#">蔬菜</a></li>
+						<li><a href="#">低温饮品/饮料</a></li>
+						<li><a href="#">主食</a></li>
+						<li><a href="#">熟食/佐餐</a></li>
+						<li><a href="#">冰激凌</a></li>
+						<li><a href="#">礼品礼券</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3><a href="#">自有品牌</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-09.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">国产水果</a></li>
+						<li><a href="#">海鲜水产</a></li>
+						<li><a href="#">生肉禽蛋</a></li>
+						<li><a href="#">蔬菜</a></li>
+						<li><a href="#">低温饮品/饮料</a></li>
+						<li><a href="#">主食</a></li>
+						<li><a href="#">熟食/佐餐</a></li>
+						<li><a href="#">冰激凌</a></li>
+						<li><a href="#">礼品礼券</a></li>
+					</ul>
+				</li>
+				<li class="last">
+					<h3><a href="#">跨境购</a></h3>
+					<div class="infor-img">
+						<a href="#"><img src="img/indeximg/feetnav-10.png"/></a>
+					</div>
+					<ul>
+						<li><a href="#">国产水果</a></li>
+						<li><a href="#">海鲜水产</a></li>
+						<li><a href="#">生肉禽蛋</a></li>
+						<li><a href="#">蔬菜</a></li>
+						<li><a href="#">低温饮品/饮料</a></li>
+						<li><a href="#">主食</a></li>
+						<li><a href="#">熟食/佐餐</a></li>
+						<li><a href="#">冰激凌</a></li>
+						<li><a href="#">礼品礼券</a></li>
+					</ul>
+				</li>
+			</ul>			
+		</div>
+<!--		feet 底部-->
+		<div class="feet">
+			<div class="help width clearfix">
+				<ul class="hint-wrap clearfix">
+					<li class="hint">  
+						<h3><a href="#">新手上路</a></h3>
+						<ul>
+							<li><a href="#">新用户演示</a></li>
+							<li><a href="#">会员积分计划</a></li>
+							<li><a href="#">会员等级规则</a></li>
+							<li><a href="#">售后服务政策</a></li>
+							<li><a href="#">我买网发票制度</a></li>
+						</ul>
+					</li>   
+					<li class="hint">  
+						<h3><a href="#">付款方式</a></h3>
+						<ul>
+							<li><a href="#">支付方式</a></li>
+							<li><a href="#">支付常见问题</a></li>
+							<li><a href="#">激活礼品卡</a></li>
+							<li><a href="#">我买卡</a></li>
+							<li><a href="#">电子礼品卡说明及使用</a></li>
+						</ul>
+					</li>
+					<li class="hint">  
+						<h3><a href="#">配送信息</a></h3>
+						<ul>
+							<li><a href="#">配送运费信息</a></li>
+							<li><a href="#">生鲜速配运费标准</a></li>
+							<li><a href="#">订单处理时间</a></li>
+							<li><a href="#">验货与拒收政策</a></li>
+							<li><a href="#">用券订单结算说明</a></li>
+						</ul>
+					</li>
+					<li class="hint">  
+						<h3><a href="#">我买提示</a></h3>
+						<ul>
+							<li><a href="#">新用户演示</a></li>
+							<li><a href="#">会员积分计划</a></li>
+							<li><a href="#">会员等级规则</a></li>
+							<li><a href="#">售后服务政策</a></li>
+							<li><a href="#">我买网发票制度</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="feetapp clearfix">
+					<ul>
+						<li class="fl">
+							<p>微信服务号</p>
+							<img src="img/indeximg/feetapp-01.png"/>
+						</li>
+						<li class="fl">
+							<p>我买网微信</p>
+							<img src="img/indeximg/feetapp-02.png"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="about-wrap">
+				<div class="about width">
+					<div class="links">
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">中粮集团</a>
+						<span>|</span>
+						<a href="#">友情链接</a>
+						<span>|</span>
+						<a href="#">搜索热词</a>
+						<span>|</span>
+						<a href="#">免责条款</a>
+						<span>|</span>
+						<a href="#">客户电话：400-005-5678</a>					
+					</div>
+					<div class="feeter clearfix width">
+						<div class="feet-logo fl">
+							<a href="#"><img src="img/indeximg/feetlogo.jpg"/></a>
+						</div>
+						<div class="feettext fl">
+							<p>Copyright©2009-2017 womai.com.hk All Rights Reserved 中粮海优（北京）有限公司版权所有</p>
+							<p>中粮海优（北京）有限公司 北京市朝阳区朝阳门南大街8号18F-09室</p>
+							<p><a href="#"><i></i></a><span>京公网安备 11010102000458号</span>   京ICP备 13003995号</p>
+							<p>营业执照（统一社会信用代码）91110000055590239L  食品经营许可证：JY11105020028185</p>
+						</div>
+					</div>
+					<div class="bottom width">
+						<a href="#"><i></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--		顶部悬浮窗-->
+		<div class="header clearfix ztop">
+			<div class="width">
+				<div class="logo fl">
+					<a href="#"><img src="img/indeximg/logo.jpg"/></a>
+				</div>
+				<div class="search-wrap fl">
+					<div class="search-l fl">
+						<div class="btn">					
+						</div>
+						<input class="fl" type="text" name="" id="" placeholder="礼盒" />
+						<button class="search-btn fl">搜索</button>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--		左边悬浮楼层-->
+		<div class="float-nav">
+			<ul>
+				<li><a href="javascript:;"><b>进口食品</b></a></li>
+				<li><a href="javascript:;"><b>生鲜日配</b></a></li>
+				<li><a href="javascript:;"><b>果蔬</b></a></li>
+				<li><a href="javascript:;"><b>奶制品</b></a></li>
+				<li><a href="javascript:;"><b>休闲保健</b></a></li>
+				<li><a href="javascript:;"><b>酒饮冲调</b></a></li>
+				<li><a href="javascript:;"><b>粮油副食</b></a></li>
+				<li><a href="javascript:;"><b>母婴玩具</b></a></li>
+				<li><a href="javascript:;"><b>个护清洁</b></a></li>
+				<li><a href="javascript:;"><b>家具家电</b></a></li>
+				<li><a href="javascript:;"><b>全球购</b></a></li>
+			</ul>
+		</div>
+<!--		右边悬浮工具框-->
+		<div class="tool-left">
+			<div class="tool-top">
+				<div class="tool-cart">
+					<em></em>
+					购物车
+					<span>0</span>
+				</div>
+			</div>
+			<div class="tool-feeter">
+				<ul>
+					<li><span>我的收藏</span>
+						<em style="background: url(img/indeximg/cart.jpg) no-repeat 0 0;"></em>
+					</li>
+					<li><span>账户中心</span>
+						<em style="background: url(img/indeximg/cart.jpg) no-repeat -34px 0;"></em>
+					</li>
+					<li><span>在线充值</span>
+						<em style="background: url(img/indeximg/cart.jpg) no-repeat -68px 0;"></em>
+					</li>
+					<li><span class="diff"><a href="#"><img src="img/indeximg/toolcode.jpg"/></a></span>
+						<em style="background: url(img/indeximg/cart.jpg) no-repeat -102px 0;"></em>
+					</li>
+					<li id="return_top"><span>顶部</span>
+						<em style="background: url(img/indeximg/cart.jpg) no-repeat -136px 0;"></em>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
