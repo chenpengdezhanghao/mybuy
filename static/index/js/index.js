@@ -111,7 +111,7 @@ $(function(){
 		})
 	})	
 	
-//	大轮播图   banner
+	// 大轮播图   banner
 	var arr = [];
 	var bgArr = [];
 	$.get("JSON/banner.json", function(data){
@@ -126,7 +126,7 @@ $(function(){
 		}
 		change();
 	})
-	
+
 	function change(){
 		var _ul1 = $(".bgimg");
 		var _ul2 = $("#mark");
@@ -139,7 +139,7 @@ $(function(){
 		var i = 0;
 		var timer = setInterval(function(){
 			i++;
-			move(); 
+			move();
 		}, 2000);
 		function move(){
 			if (i == size) {
@@ -150,23 +150,23 @@ $(function(){
 			}
 			_li1.eq(i).stop().fadeIn().siblings().stop().fadeOut();
 			_li2.eq(i).removeClass("hover").addClass("hover").siblings().removeClass("hover");
-			$(".banner-wrap").css({"background":"rgb(" + bgArr[i] + ")"});			
+			$(".banner-wrap").css({"background":"rgb(" + bgArr[i] + ")"});
 		}
 		_li2.hover(function(){
 			var index = $(this).index();
 			i = index;
 			move();
-		})	
+		})
 		$(".banner").mouseenter(function(){
-			clearInterval(timer);			
+			clearInterval(timer);
 			$("#prer").stop(true).addClass("left-btn").show();
 			$("#next").stop(true).addClass("right-btn").show();
-		}) 			
+		})
 		$(".banner").mouseleave(function(){
 			$("#prer").stop(true).hide();
 			$("#next").stop(true).hide();
 			timer = setInterval(function(){
-				i++;				
+				i++;
 				move();
 			}, 2000);
 		})
@@ -182,6 +182,8 @@ $(function(){
 			move();
 		})
 	}
+
+
 	$(".floor-r .tit li").mouseenter(function(){
 		$(this).addClass("cur").siblings().removeClass("cur");
 		$(this).parent().parent().find(".floor-r-pg1").eq($(this).index()).show().siblings(".floor-r-pg1").hide();

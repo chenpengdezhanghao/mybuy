@@ -7,8 +7,12 @@
 		<script src="{% static 'index/js/jquery-1.12.3.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'index/js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'index/js/index.js' %}" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="{% static 'index/css/reset.css' %}"/>
+        <script src="{% static 'index/js/swiper.min.js' %}"></script>
+        <script src="{% static 'index/js/lunbo.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'index/css/reset.css' %}"/>
 		<link rel="stylesheet" type="text/css" href="{% static 'index/css/index.css' %}"/>
+        <link rel="stylesheet" href="{% static 'index/css/swiper.min.css' %}">
+        <link rel="stylesheet" href="{% static 'index/css/lunbo.css' %}">
 	</head>
 	<body>
 
@@ -708,72 +712,49 @@
 		<div class="width">
 
 		</div>
-		<div class="banner-wrap">
-			<div class="width">
-				<div class="banner fl">
-					<ul class="bgimg">
-					</ul>
-					<ul id="mark">
-					</ul>
-					<div id="prer">
+{#		<div class="swiper-container" id="topSwiper">#}
+{#            <div class="swiper-wrapper">#}
+{#                {% for wheel in wheels %}#}
+{#                    <div class="swiper-slide">#}
+{#                        <img src="{{ wheel.img }}" alt="">#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{##}
+{#                            <a href="#" class="swiper-slide">#}
+{#                                <img src="{% static 'index/img/indeximg/banner-01.jpg' %}" alt="">#}
+{#                            </a>#}
+{#                            <a href="#" class="swiper-slide">#}
+{#                                <img src="{% static 'index/img/indeximg/banner-02.jpg' %}" alt="">#}
+{#                            </a>#}
+{#                            <a href="#" class="swiper-slide">#}
+{#                                <img src="{% static 'index/img/indeximg/banner-03.jpg' %}" alt="">#}
+{#                            </a>#}
+{#            </div>#}
+{#            <!-- Add Pagination -->#}
+{#            <div class="swiper-pagination"></div>#}
+{#            <!-- Add Arrows -->#}
+{#            <div class="swiper-button-next"></div>#}
+{#            <div class="swiper-button-prev"></div>#}
+{#        </div>#}
+        <div class="swiper-container" id="topSwiper">
+            <div class="swiper-wrapper">
 
-					</div>
-					<div id="next">
-
-					</div>
-				</div>
-				<div class="banner-r fl">
-					<div class="msg">
-						<ul class="title">
-							<li class="current">服务公告</li>
-							<li>卡券专栏</li>
-							<li>VIP通道</li>
-						</ul>
-						<ul class="cont-wrap">
-							<li class="cont">
-								<ul>
-									<li><a href="#"><span></span><b>包邮直送及全球购频道...</b></a></li>
-									<li><a href="#"><span></span><b>武汉站及安徽站配送延...</b></a></li>
-									<li><a href="#"><span></span><b>翼支付满39元随机立减...</b></a></li>
-								</ul>
-							</li>
-							<li class="cont" style="display: none;">
-								<ul>
-									<li><a href="#"><span></span><b>上海肯德基活动小提示...</b></a></li>
-									<li><a href="#"><span></span><b>注册送劵活动单品折扣...</b></a></li>
-									<li><a href="#"><span></span><b>网络申请民生信用卡，...</b></a></li>
-								</ul>
-							</li>
-							<li class="cont" style="display: none;">
-								<ul>
-									<li><a href="#"><span></span><b>2016年4月VIP会员专享...</b></a></li>
-									<li><a href="#"><span></span><b>2016年3月VIP 会员专享...</b></a></li>
-									<li><a href="#"><span></span><b>2016年2月VIP会员专享...</b></a></li>
-								</ul>
-							</li>
-
-						</ul>
-						<div class="app-wrap">
-							<ul class="phapp">
-								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-01.png'%}"></a></li>
-								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-02.png'%}"></a></li>
-								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-03.png'%}"></a></li>
-								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-04.png'%}"></a></li>
-								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-05.png'%}"></a></li>
-								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-06.png'%}"></a></li>
-								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-07.png'%}"></a></li>
-								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-08.png'%}"></a></li>
-								<li><a href="#"><img src="{% static 'index/img/indeximg/appicon-09.png'%}"></a></li>
-							</ul>
-							<div class="app-ad">
-								<a href="#"><img src="{% static 'index/img/indeximg/appad.png'%}"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'index/img/indeximg/banner-03.jpg' %}" alt="">
+                    </div>
+                     <div class="swiper-slide">
+                        <img src="{% static 'index/img/indeximg/banner-01.jpg' %}" alt="">
+                    </div>
+                     <div class="swiper-slide">
+                        <img src="{% static 'index/img/indeximg/banner-02.jpg' %}" alt="">
+                    </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
 		<!--主体 item-->
 		<div class="main-wrap">
 			<div class="main width">
