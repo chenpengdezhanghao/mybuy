@@ -1,0 +1,76 @@
+[
+	{	
+		"id": 1001,
+		"name": "【自营】蒙牛纯甄巴氏杀菌热处理风味酸牛奶利乐钻200g*24/箱",
+		"price" : 84.90,
+		"unit": "￥",
+		"headImg": "img/indeximg/mad-01.jpg",
+		"zoom": ["../img/detailimg/common1-01.jpg","../img/detailimg/common1-02.jpg","../img/detailimg/common1-03.jpg","../img/detailimg/common1-04.jpg"],
+		"small":["../img/detailimg/small01-01.jpg","../img/detailimg/small01-02.jpg","../img/detailimg/small01-03.jpg","../img/detailimg/small01-04.jpg"]
+		 
+	},
+	{	
+		"id": 1002,
+		"name": "【自营】桂格即食燕麦片超值装1478g（新老包装替换）",
+		"price" : 23.90,
+		"unit": "￥",
+		"headImg": "img/indeximg/mad-02.jpg", 
+		"zoom": ["../img/detailimg/common2-01.jpg","../img/detailimg/common2-02.jpg"],
+		"small":["../img/detailimg/small02-01.jpg","../img/detailimg/small02-02.jpg"]
+	},
+	{	
+		"id": 1003,
+		"name": "【中粮海外直采】红帽子黄色什锦饼干礼盒136.5g（日本进口 盒）",
+		"price" : 69.00,
+		"unit": "￥",
+		"headImg": "img/indeximg/mad-03.jpg",
+		"zoom": ["../img/detailimg/common3-01.jpg","../img/detailimg/common3-02.jpg","../img/detailimg/common3-03.jpg","../img/detailimg/common3-04.jpg"],
+		"small":["../img/detailimg/small03-01.jpg","../img/detailimg/small03-02.jpg","../img/detailimg/small03-03.jpg","../img/detailimg/small03-04.jpg"]
+	},
+	{	
+		"id": 1004,
+		"name": "【自营】美的（Midea）电热水壶MK-GE1703（养生壶 玻璃壶 煎药壶 茶水",
+		"price" : 699.00,
+		"unit": "￥",
+		"headImg": "img/indeximg/mad-04.jpg", 
+		"zoom": ["../img/detailimg/common4-01.jpg"],
+		"small":["../img/detailimg/small04-01.jpg"]
+	},
+	{	
+		"id": 1005,
+		"name": "【包邮】暖民山楂100g 无核山楂干片 山楂干果茶 花果茶",
+		"price" : 17.40,
+		"unit": "￥",
+		"headImg": "img/indeximg/mad-05.jpg",
+		"zoom": ["../img/detailimg/common5-01.jpg","../img/detailimg/common5-02.jpg","../img/detailimg/common5-03.jpg","../img/detailimg/common5-04.jpg"],
+		"small":["../img/detailimg/small05-01.jpg","../img/detailimg/small05-02.jpg","../img/detailimg/small05-03.jpg","../img/detailimg/small05-04.jpg"]
+		 
+	},
+	{	
+		"id": 1006,
+		"name": "【自营】碧然德净水器/饮用水加热器 1.8L",
+		"price" : 258.00,
+		"unit": "￥",
+		"headImg": "img/indeximg/mad-06.jpg",
+		"zoom": ["../img/detailimg/common6-01.jpg","../img/detailimg/common6-02.jpg","../img/detailimg/common6-03.jpg"],
+		"small":["../img/detailimg/small06-01.jpg","../img/detailimg/small06-02.jpg","../img/detailimg/small06-03.jpg"]
+	},
+	{	
+		"id": 1007,
+		"name": "【仅限京津地区销售】龙和海鲜儿童水饺四种口味混合装215gx4袋",
+		"price" : 169.00,
+		"unit": "￥",
+		"headImg":"img/indeximg/mad-07.jpg", 
+		"zoom": ["../img/detailimg/common7-01.jpg","../img/detailimg/common7-02.jpg","../img/detailimg/common7-03.jpg","../img/detailimg/common7-04.jpg"],
+		"small":["../img/detailimg/small07-01.jpg","../img/detailimg/small07-02.jpg","../img/detailimg/small07-03.jpg","../img/detailimg/small07-04.jpg"]
+	},
+	{	
+		"id": 1008,
+		"name": "【自营】英国摩飞 MR9200便携式果汁机",
+		"price" : 258.00,
+		"unit": "￥",
+		"headImg": "img/indeximg/mad-08.jpg",
+		"zoom": ["../img/detailimg/common8-01.jpg","../img/detailimg/common8-02.jpg","../img/detailimg/common8-03.jpg","../img/detailimg/common8-04.jpg"],
+		"small":["../img/detailimg/small08-01.jpg","../img/detailimg/small08-02.jpg","../img/detailimg/small08-03.jpg","../img/detailimg/small08-04.jpg"]
+	}
+]

@@ -1,10 +1,589 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>订单</title>
-</head>
-<body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<script src="{% static 'detail/js/jquery-1.12.3.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'detail/js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'detail/js/detail.js' %}" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'detail/css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'detail/css/detail.css' %}"/>
+	</head>
+	<body>
+		<div class="top_nav_wrap">
+			<div class="top_nav width clearfix">
+				<ul class="nav-l float">
+					<li class="float"><p><span>当前城市：</span><span id="city">北京</span><i class="arrow_down"></i></p></li>
+				</ul>
+				<ul class="nav-m float">
+					<li class="float">欢迎您！</li>
+					<li class="float"><a class="log" style="color:#8cb91e" href="#">登录</a></li>
+					<li class="float"><a class="reg" href="#">注册</a></li>
+				</ul>
+				<ul class="nav-r" style="margin-right: 10px;">
+					<li class="own fl"><p><a href="#"><span class="text">我的账户<i></i></span></a></p>
+						<div class="mycount">
+							<p><span>您还没有登录</span><a style="color:#8cb91e" href="#" class="log">登录</a></p>
+							<ul>
+								<li><a href="#">待付款订单</a></li>
+								<li><a href="#">我的消息</a></li>
+								<li><a href="#">待签收订单</a></li>
+								<li><a href="#">我的订单</a></li>
+								<li><a href="#">支付卡账户</a></li>
+								<li><a href="#">我的积分</a></li>
+								<li><a href="#">优惠券/团购卡</a></li>
+								<li><a href="#">我的收藏</a></li>
+								<li><a href="#">电子礼品卡</a></li>
+								<li><a href="#">兑 换 券</a></li>
+							</ul>
+						</div>								
+					</li>
+					<li class="cart fl"><p><a href="#"><span class="text">购物车<b>0</b>件</span></a></p></li>
+					<li class="line fl">|</li>
+					<li class="own fl"><p><a href="#"><span class="text">客户服务<i></i></span></a></p>
+						<div class="mycount consumer">
+							<ul>
+								<li><a href="#">帮助中心</a></li>
+								<li><a href="#">新手上路</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="line fl">|</li>
+					<li class="fl"><p><a href="#"><span class="text">大客户</span></a></p></li>
+					<li class="line fl">|</li>
+					<li class="fr"><a href="#"><span class="icbc"></span></a><a href="#"><span class="zhxin"></span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header clearfix">
+			<div class="width">
+				<div class="logo fl">
+					<a href="#"><img src="{% static 'index/img/indeximg/logo.jpg' %}"/></a>
+				</div>
+				<div class="search-wrap fl">
+					<div class="search-l fl">
+						<div class="btn">					
+						</div>
+						<input class="fl" type="text" name="" id="" placeholder="回家过节 吃点好的 进口零食坚果低至59.9" />
+						<button class="search-btn fl">搜索</button>
+					</div>
+					<div class="search-r fl">
+						<a href="#">高级<br/>搜索</a>
+					</div>
+					<div class="search-b">
+						<a href="#">月饼</a>
+						<a href="#">大米</a>
+						<a href="#">牛奶</a>
+						<a href="#">牛排</a>
+						<a href="#">坚果礼盒</a>
+						<a href="#">大闸蟹</a>
+					</div>
+				</div>
+				<div class="app fr">
+					<img src="{% static 'index/img/indeximg/appcode.jpg' %}"/>
+				</div>
+			</div>
+		</div>
+<!--		导航-->
+		<div class="main-nav-wrap">
+			<div class="main-nav width">
+{#				<div class="allkinds">#}
+{#					<h2>全部商品分类</h2>#}
+{#					<ul class="list">#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list01.png' %});"></b><a class="kind" href="#">肉禽水产</a><a class="kind" href="#">水果蔬菜</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list02.png' %});"></b><a class="kind" href="#">进口生鲜</a><a class="kind" href="#">进口水果</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list03.png' %});"></b><a class="kind" href="#">进口食品</a><a class="kind" href="#">进口直采</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list04.png' %});"></b><a class="kind" href="#">酒</a><a class="kind" href="#">饮料/冲调</a><a class="kind" href="#">茶</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list05.png' %});"></b><a class="kind" href="#">休闲零食</a><a class="kind" href="#">地方特产</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list06.png' %});"></b><a class="kind" href="#">营养健康</a><a class="kind" href="#">奶制品</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list07.png' %});"></b><a class="kind" href="#">粮油副食</a><a class="kind" href="#">调味干货</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list08.png' %});"></b><a class="kind" href="#">母婴食品</a><a class="kind" href="#">母婴用品</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list09.png' %});"></b><a class="kind" href="#">个护美妆</a><a class="kind" href="#">家用清洁</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list10.png' %});"></b><a class="kind" href="#">厨具家纺</a><a class="kind" href="#">家电3C</a></h3>#}
+{##}
+{#						</li>#}
+{#						<li class="kinds"><h3><b style="background: url({% static 'index/img/indeximg/list11.png' %});"></b><a class="kind" href="#">礼卡礼券</a></h3>#}
+{##}
+{#						</li>#}
+{#					</ul>#}
+{#				</div>#}
+				<div class="nav-im">
+					<ul >
+						<li><a href="#">首页</a></li>
+						<li><a href="#">团购</a></li>
+						<li><a href="#">每日鲜</a></li>
+						<li><a href="#">我买酒</a></li>
+						<li><a href="#">中粮出品</a></li>
+						<li><a href="#">包邮直送</a></li>
+						<li><a href="#">全球购</a></li>
+					</ul>
+				</div>
+				<div class="mincart">
+					<div class="cart-btn">
+						<span class="cart-look">
+							<i>0</i>
+						</span>
+						<span class="text">
+							<a href="#">购物车</a>
+						</span>
+						<span class="arrow">
 
-</body>
+						</span>
+					</div>
+					<div class="min-cart">
+						<div class="free">
+							<span>
+								<img src="{% static 'index/img/indeximg/cart-no.jpg' %}"/>
+							</span>
+							<p>
+								购物车中还没有商品，赶紧选购吧！<a class="ind" href="#">去首页看看</a>
+							</p>
+						</div>
+						<div id="small_cart">
+							<h3>最近加入的商品</h3>
+							<div class="item-wrap">
+								<ul class="item-list">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="position width">
+			<a class="ind" href="#">首页</a>
+			>
+			<a class="name" href="#">【自营】(资生堂3件组) 水之密语净澄水活洗发露(倍润型)600ml+护发素600ml+可悠然幽香浴露550ml</a>
+		</div>
+		<div class="detail-top width clearfix">
+			<div class="detail-t-l">
+				<div class="born-wrap">
+					<div class="born">
+						<span class="zoom-out">
+							<img src="{% static 'detail/img/detailimg/header-01.jpg' %}"/>
+							<div class="zoom-up">
+								
+							</div>
+						</span>
+						<div class="zoom-in">
+							<img src="{% static 'detail/img/detailimg/header-01.jpg' %}"/>
+						</div>
+					</div>
+					<div class="scroll">
+						<div class="pre">							
+						</div>
+						<div class="next">							
+						</div>
+						<div class="items">
+							<ul>
+							</ul>
+						</div>
+						<a class="search-png" href="#"></a>
+					</div>
+				</div>
+			</div>
+			<div class="detail-t-r">
+				<div class="tit">
+					<p>【自营】(资生堂3件组) 水之密语净澄水活洗发露(倍润型)600ml+护发素600ml+可悠然幽香浴露550ml</p>
+				</div>
+				<div class="t-middle clearfix">
+					<div class="m-tit">
+						抢购价：
+					</div>
+					<div class="price">
+						￥<span>139.00</span>
+					</div>
+				</div>
+				<div class="region clearfix">
+					<div class="detail-text fl">
+						<div class="clearfix">
+							<div class="m-tit-l">
+								送至：
+							</div>
+							<div class="addr fl">
+								<div class="addrtext-wrap">
+									<div class="addrtext">
+										北京海淀区
+									</div>
+									<i></i>
+								</div>
+							</div>
+							<div class="time fl">
+								11:00前完成下单预计10月14日（周六） 送达
+							</div>							
+						</div>
+						<div class="service clearfix">
+							<div class="m-tit-l fl">
+								服务：
+							</div>
+							<div class="ser-bom fl">							
+								由我买网发货并提供售后服务。
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="buy-wrap">
+					<div class="buy clearfix">
+						<div class="buy-infor clearfix">
+							<div class="m-tit-l">
+								数量：
+							</div>
+							<div class="number">
+								<div class="num-ipt">
+									<input class="num" type="text" name="" id="" value="1" />
+									<span class="add">
+										+
+									</span>
+									<span class="cut">
+										-
+									</span>
+								</div>								
+							</div>							
+						</div>
+						<div class="buy-btn fl">
+							<b class="png"></b>
+							加入购物车						
+						</div>
+						<div class="app-btn fl">
+							<div class="btn">
+								<b class="png"></b>
+								扫一扫下单
+							</div>							
+						</div>
+						<div class="love-btn">
+							收藏
+						</div>						
+					</div>
+					<div id="alert">
+						<div class="alert-box">
+							<div class="buy-png">							
+								</div>
+							<div class="go-btn">
+								继续购物
+							</div>
+							<div class="alert-top">
+								<div class="title-top">
+									此商品成功放入购物车
+								</div>
+								<div class="font">
+									购物车共
+									<font>0</font>件宝贝
+									<span>合计</span><font>0</font>
+								</div>
+								<div class="alert-btn">
+									<div class="btn-left">
+										<a href="#">去购物车结算</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>						
+					<div class="groub">
+						<div class="groub-top">
+							<div class="top-tit">
+								组合套餐明细：
+							</div>
+							<div class="page">
+								<a href="javascript:;" class="cur-a">1</a>
+								<a href="javascript:;">2</a>
+							</div>
+						</div>
+						<div class="count-wrap">
+							<div class="count">
+								<ul class="clearfix">
+									<li>
+										<div class="gift">
+											<a href="#"><img src="{% static 'detail/img/detailimg/top-01.jpg' %}"/></a>
+										</div>
+										<h2><a href="#">【自营】资生堂水之密语净澄水活洗发露(倍润型)600ml/</a></h2>
+										<span>×1</span>
+									</li>
+									<li>
+										<div class="gift">
+											<a href="#"><img src="{% static 'detail/img/detailimg/top-02.jpg' %}"/></a>
+										</div>
+										<h2><a href="#">【自营】可悠然欣怡幽香美肌沐浴550m(瓶装)/</a></h2>
+										<span>×1</span>
+									</li>
+									<li>
+										<div class="gift">
+											<a href="#"><img src="{% static 'detail/img/detailimg/top-03.jpg' %}"/></a>
+										</div>
+										<h2><a href="#">【自营】资生堂水之密语净澄水活护发素600ml/</a></h2>
+										<span>×1</span>
+									</li>
+								</ul>
+							</div>						
+						</div>
+					</div>					
+				</div>				
+			</div>			
+		</div>
+		<div class="main-count width clearfix">
+			<div class="main-l">
+				<div class="detail-l-list-wrap">
+					<div class="left-tit">组合套餐热销榜</div>
+					<div class="rank-list">
+						<dl class="rank-1">
+							<dt>
+								<a href="#"><img src="{% static 'detail/img/detailimg/rank-01.jpg' %}"/></a>
+								<span class="rank-icon"></span>
+							</dt>
+							<dd>
+								<div class="dd-name">
+									<a href="#">[卡券专用]中粮凌鲜 大洋世家青虾仁 51/60 175g …</a>
+								</div>
+								<div class="dd-price">
+									￥27.00
+								</div>
+							</dd>
+						</dl>
+						<dl class="rank-2">
+							<dt>
+								<a href="#"><img src="{% static 'detail/img/detailimg/rank-02.jpg' %}"/></a>
+								<span class="rank-icon"></span>
+							</dt>
+							<dd>
+								<div class="dd-name">
+									<a href="#">【自营】特鲜炼奶芝士味饼干(袋装 600g)2袋组合装</a>
+								</div>
+								<div class="dd-price">
+									￥19.80
+								</div>
+							</dd>
+						</dl>
+						<dl class="rank-3">
+							<dt>
+								<a href="#"><img src="{% static 'detail/img/detailimg/rank-03.jpg' %}"/></a>
+								<span class="rank-icon"></span>
+							</dt>
+							<dd>
+								<div class="dd-name">
+									<a href="#">【自营】suki 多美鲜 全脂牛奶 1L (德国进口 盒）…</a>
+								</div>
+								<div class="dd-price">
+									￥99.00
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="main-r">
+				<div class="right-nav">
+					<ul>
+						<li><a href="#">商品信息</a></li>
+						<li><a href="#">商品评价</a></li>
+						<li><a href="#">食品网购专家</a></li>
+						<li><a href="#">菜谱&百科</a></li>   
+					</ul>
+					<div class="detail-phone">
+						<a href="#">订单状态，随手掌控，手机我买网</a>
+					</div>
+				</div>
+				<div class="rightborder">
+					<div class="right-count">						
+						<h2>【自营】(资生堂3件组) 水之密语净澄水活洗发露(倍润型)600ml+护发素600ml+可悠然幽香浴露550ml</h2>
+						<img src="{% static 'detail/img/detailimg/bgimg.jpg' %}"/>
+					</div>
+					<div class="botmsg">
+						<p>您还可以来<a href="#">[我买团]</a>买优惠的商品，来<a href="#">[我买酒]</a>享受酒文化，来<a href="#">[美食天下]</a>阅读美食资讯与菜谱</p>
+					</div>
+					<div class="botmsg msg2">商品评价</div>				
+					<div class="intryse clearfix">
+						<div class="fl">
+							<div class="ins-img">
+								<p><span>0.0</span>分</p>							
+							</div>
+							<p class="ping"><span>口碑: <b>0</b></span>评价: <b>0</b>条</p>
+						</div>				
+						<div class="text-ping fr">
+							<button>我要评价</button>
+							<h4>购买并评价商品，过审后得<b>10</b>积分!<b>前5位</b>通过审核的买友可获双倍积分! <a href="#">积分规则</a></h4>
+						</div>
+					</div>
+					<div class="botmsg linkss">							
+							<a href="#">全部(0)</a>
+							<span>|</span>
+							<a href="#">好评(0)</a>
+							<span>|</span>
+							<a href="#">中评(0)</a>
+							<span>|</span>
+							<a href="#">差评(0)</a>
+							<span>|</span>
+							<a href="#">口碑(0)</a>
+					</div>	
+					<div class="botmsg msg2">中粮我买网-食品网购专家</div>	
+					<div class="botadd">
+						<ul id="list1" class="clearfix">
+							<li class="bghover"><i></i></li>
+							<li><i></i></li>
+							<li><i></i></li>
+							<li><i></i></li>
+							<li><i></i></li>
+							<li><i></i></li>
+							<li><i></i></li>
+							<li><i></i></li>
+						</ul>
+						<ul class="expt">
+							<li style="display: block;"><img src="{% static 'detail/img/detailimg/expert_cont_1.jpg' %}"/></li>
+							<li><img src="{% static 'detail/img/detailimg/expert_cont_2.jpg' %}"/></li>
+							<li><img src="{% static 'detail/img/detailimg/expert_cont_3.jpg' %}"/></li>
+							<li><img src="{% static 'detail/img/detailimg/expert_cont_4.jpg' %}"/></li>
+							<li><img src="{% static 'detail/img/detailimg/expert_cont_5.jpg' %}"/></li>
+							<li><img src="{% static 'detail/img/detailimg/expert_cont_6.jpg' %}"/></li>
+							<li><img src="{% static 'detail/img/detailimg/expert_cont_7.jpg' %}"/></li>
+							<li><img src="{% static 'detail/img/detailimg/expert_cont_8.jpg' %}"/></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+    
+			
+			
+			
+			
+		</div>
+		
+		
+<!--		尾部-->
+		<div class="feet">
+			<div class="help width clearfix">
+				<ul class="hint-wrap clearfix">
+					<li class="hint">  
+						<h3><a href="#">新手上路</a></h3>
+						<ul>
+							<li><a href="#">新用户演示</a></li>
+							<li><a href="#">会员积分计划</a></li>
+							<li><a href="#">会员等级规则</a></li>
+							<li><a href="#">售后服务政策</a></li>
+							<li><a href="#">我买网发票制度</a></li>
+						</ul>
+					</li>   
+					<li class="hint">  
+						<h3><a href="#">付款方式</a></h3>
+						<ul>
+							<li><a href="#">支付方式</a></li>
+							<li><a href="#">支付常见问题</a></li>
+							<li><a href="#">激活礼品卡</a></li>
+							<li><a href="#">我买卡</a></li>
+							<li><a href="#">电子礼品卡说明及使用</a></li>
+						</ul>
+					</li>
+					<li class="hint">  
+						<h3><a href="#">配送信息</a></h3>
+						<ul>
+							<li><a href="#">配送运费信息</a></li>
+							<li><a href="#">生鲜速配运费标准</a></li>
+							<li><a href="#">订单处理时间</a></li>
+							<li><a href="#">验货与拒收政策</a></li>
+							<li><a href="#">用券订单结算说明</a></li>
+						</ul>
+					</li>
+					<li class="hint">  
+						<h3><a href="#">我买提示</a></h3>
+						<ul>
+							<li><a href="#">新用户演示</a></li>
+							<li><a href="#">会员积分计划</a></li>
+							<li><a href="#">会员等级规则</a></li>
+							<li><a href="#">售后服务政策</a></li>
+							<li><a href="#">我买网发票制度</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="feetapp clearfix">
+					<ul>
+						<li class="fl">
+							<p>微信服务号</p>
+							<img src="{% static 'index/img/indeximg/feetapp-01.png' %}"/>
+						</li>
+						<li class="fl">
+							<p>我买网微信</p>
+							<img src="{% static 'index/img/indeximg/feetapp-02.png' %}"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="about-wrap">
+				<div class="about">
+					<div class="links">
+						<a href="#">关于我们</a>
+						<span>|</span>
+						<a href="#">中粮集团</a>
+						<span>|</span>
+						<a href="#">友情链接</a>
+						<span>|</span>
+						<a href="#">搜索热词</a>
+						<span>|</span>
+						<a href="#">免责条款</a>
+						<span>|</span>
+						<a href="#">客户电话：400-005-5678</a>					
+					</div>
+					<div class="feeter clearfix width">
+						<div class="feet-logo fl">
+							<a href="#"><img src="{% static 'index/img/indeximg/feetlogo.jpg' %}"/></a>
+						</div>
+						<div class="feettext fl">
+							<p>Copyright©2009-2017 womai.com.hk All Rights Reserved 中粮海优（北京）有限公司版权所有</p>
+							<p>中粮海优（北京）有限公司 北京市朝阳区朝阳门南大街8号18F-09室</p>
+							<p><a href="#"><i></i></a><span>京公网安备 11010102000458号</span>   京ICP备 13003995号</p>
+							<p>营业执照（统一社会信用代码）91110000055590239L  食品经营许可证：JY11105020028185</p>
+						</div>
+					</div>
+					<div class="bottom width">
+						<a href="#"><i></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--		左边悬浮工具框-->
+		<div class="tool-left">
+			<div class="tool-top">
+				<div class="tool-cart">
+					<em></em>
+					购物车
+					<span>0</span>
+				</div>
+			</div>
+			<div class="tool-feeter">
+				<ul>
+					<li><span>我的收藏</span>
+						<em style="background: url({% static 'index/img/indeximg/cart.jpg' %}) no-repeat 0 0;"></em>
+					</li>
+					<li><span>账户中心</span>
+						<em style="background: url({% static 'index/img/indeximg/cart.jpg' %}) no-repeat -34px 0;"></em>
+					</li>
+					<li><span>在线充值</span>
+						<em style="background: url({% static 'index/img/indeximg/cart.jpg' %}) no-repeat -68px 0;"></em>
+					</li>
+					<li><span class="diff"><a href="#"><img src="{% static 'index/img/indeximg/toolcode.jpg' %}"/></a></span>
+						<em style="background: url({% static 'index/img/indeximg/cart.jpg' %}) no-repeat -102px 0;"></em>
+					</li>
+					<li id="return_top"><span>顶部</span>
+						<em style="background: url({% static 'index/img/indeximg/cart.jpg' %}) no-repeat -136px 0;"></em>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
 </html>

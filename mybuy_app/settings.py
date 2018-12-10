@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'mybuy_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'my_buy',
+        'NAME': 'mybuy',
         'USER':'root',
         'PASSWORD':'123456',
     }

@@ -1,10 +1,201 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>购物车</title>
-</head>
-<body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车_我买网</title>
+		<script src="{% static 'cart/js/jquery-1.12.3.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'cart/js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'cart/js/cart.js' %}" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'cart/css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'cart/css/cart.css' %}"/>
+	</head>
+	<body>
+		<div class="cart-content">
+			<div class="header">
+				<div class="w">
+					<ul class="nav-r">
+						<li class="mycount-wrap">
+							<a href="#">我的账户</a>
+							<i></i>
+							<div class="mycount">
+								<dl class="count-l">
+									<dt>您还没有登录</dt>
+									<dd class="nopay"><a href="#"> 待付款订单</a><i></i></dd>
+									<dd><a href="#"> 待签收订单</a></dd>
+									<dd><a href="#"> 支付卡账户</a></dd>
+									<dd><a href="#"> 优惠券/团购卡</a></dd>
+									<dd><a href="#"> 电子礼品卡</a></dd>										    
+								</dl>
+								<dl class="count-r">
+									<dt><span><a class="log" href="#">登录</a></span></dt>
+									<dd class="mymsg"><a href="#"> 我的消息</a><i></i></dd>
+									<dd><a href="#"> 我的订单</a></dd>
+									<dd><a href="#"> 我的积分</a></dd>
+									<dd><a href="#"> 我的收藏</a></dd>
+								</dl>								
+							</div>
+						</li>
+					</ul>
+					<ul class="top-login">
+						<li class="none"><span>qzuser，<a class="log" href="#">请登录</a></span></li>
+						<li class="none">|<a class="reg" style="margin-left: 14px;" href="#">免费注册</a></li>
+					</ul>
+				</div>				
+			</div>
+			<div class="header-box w">
+				<div class="logo">
 
-</body>
+					<a href="#"><img src={% static 'register/img/registerimg/logo.jpg' %}/></a>
+				</div>
+				<ul class="step">
+					<li></li>
+				</ul>
+			</div>
+			<div class="w">
+				<div class="cart-empty">
+					<h2>您的购物车中没有商品，赶快行动吧！</h2>
+					<p>去<a class="ind" href="#">首页</a>挑选喜爱的商品，或<a class="log" href="#">登录</a>访问收藏的商品。</p>
+				</div>
+				<div class="full-cart">
+					<div class="trip-div clearfix">
+						<div class="">
+							<div class="trip-content">
+								<span>我的购物车</span>
+							</div>
+							<div class="address fl">
+								<div class="service-tit fl">
+									送至：
+								</div>
+								<div class="address-select fl">
+									北京朝阳区
+									<s></s>
+								</div>								
+							</div>
+							<a href="#" class="fr">继续购物></a>
+						</div>
+					</div>
+					<div class="shopping-cart">
+						<div class="order-nav clearfix">
+							<ul class="fl">
+								<li>
+									<strong>
+										我买网发货单(<em></em>)
+									</strong>
+								</li>
+							</ul>
+							<div class="totalprice-top fr">
+								<p class="fl">已选商品（含预估运费）：
+									<span>									
+										￥<em>0</em>
+									</span>								
+								</p>
+								<a href="#" class="fr total"></a>
+							</div>
+						</div>
+						<div class="order-contents">
+							<div class="order-titline clearfix">
+								<div class="od-tit od_tit_1">
+									商品
+								</div>
+								<div class="od-tit od_tit_2">
+									单价
+								</div>
+								<div class="od-tit od_tit_3">
+									数量
+								</div>
+								<div class="od-tit od_tit_4">
+									小计
+								</div>
+								<div class="od-tit od_tit_5">
+									操作
+								</div>
+							</div>
+							<div class="order-content">
+								<div class="showcart">
+									<div class="ordercontent">
+										<div class="ordercontent-titline clearfix">
+											<div class="tit-select fl">
+												<input type="checkbox" name="" id="all" value="" class="fl all" checked="checked" />
+												<label for="all">所有商品</label>
+											</div>
+											<div class="total-mid fr">
+												<span>
+													金额合计￥<em>0</em>
+												</span>
+											</div>
+										</div>
+										
+									</div>
+									<div class="order-amount clearfix">
+										<div class="fl">
+											<div class="ordercent-edit clearfix">
+												<div class="allcheck fl">
+													<input type="checkbox" name="" id="allcheck" value="" checked="checked" class="all"/>
+													<label for="allcheck">全选</label>
+														
+												</div>
+												<div class="collect fl">
+													<a href="#">收藏</a>
+												</div>
+												<div class="pos fl">
+													<a href="#">删除</a>
+												</div>
+											</div>
+										</div>
+										<div class="ordam-right">
+											<div class="ordam-money clearfix">
+												<span class="oar-title fl">
+													预估运费：
+												</span>
+												<span id="total_ora" class="oar-money fl">
+													￥0
+												</span>
+											</div>
+											<div class="ordam-money clearfix ora-bot">
+												<span class="oar-title fl">
+													商品金额：
+												</span>
+												<span class="oar-money fl">
+													￥<span>0</span>
+												</span>
+											</div>
+											<div class="ordam-total clearfix">
+												<span class="to-num">
+													已选<em>0</em>件
+												</span>
+												<span class="ora-tol-money fl">
+													￥<span>0</span>		
+												</span>
+												<span class="ora-tol-tit">
+													应付金额：
+												</span>
+											</div>
+											<div class="btn-bottom">
+												<a href="#">去结算</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="feeter w">
+			<div class="beian">
+				<p>
+					<a href="#"><img src={% static 'register/img/registerimg/beian.png' %}/>京公网安备 11010102000458号</a>
+					<span>|</span>
+					京ICP备 13003995号 
+					<span>|</span>
+					营业执照（统一社会信用代码）91110000055590239L
+					<span>|</span>
+					食品经营许可证：JY11105020028185
+				</p>
+				<p class="bottom">Copyright©2009-2017 womai.com.hk 版权所有</p>
+			</div>
+		</div>
+	</body>
 </html>

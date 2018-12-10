@@ -7,8 +7,8 @@ $(function () {
         prevButton: '.swiper-button-prev',
         slidesPerView: 1,
         paginationClickable: true,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: 1000,
+        spaceBetween: 50,
+        loop: false,
+        autoplay: 2000,
     });
 })
