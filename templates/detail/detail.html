@@ -189,6 +189,13 @@
 						</div>
 					</div>
 					<div class="scroll">
+                        {% for item in items.zoom %}
+                            <div>
+                                <img src="{% static item %}" alt="">
+                            </div>
+                        {% endfor %}
+
+                        
 						<div class="pre">							
 						</div>
 						<div class="next">							
