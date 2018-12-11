@@ -1,15 +1,20 @@
 {% load static %}
-<!DOCTYPE html>
+{#<!DOCTYPE html>#}
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>填写信息_会员注册</title>
-		<script src=".{% static 'register/js/jquery-1.12.3.js' %}" type="text/javascript" charset="utf-8"></script>
+
+        <script src="{% static 'register/js/jquery-1.12.3.js' %}" type="text/javascript" charset="utf-8"></script>
+        <script src="{% static 'register/js/bootstrap.min.js' %}"></script>
 		<script src="{% static 'register/js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
-		<script src="{% static 'register/js/register.js' %}" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="{% static 'register/css/reset.css' %}"/>
-		<link rel="stylesheet" type="text/css" href="{% static 'register/css/register.css' %}"/>
-	</head>
+        <script src="{% static 'register/js/register.js' %}" type="text/javascript" charset="utf-8"></script>
+        <script src="{% static 'register/js/my_register.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'register/css/reset.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'register/css/register.css' %}"/>
+        <link rel="stylesheet" href="{% static 'register/css/bootstrap.min.css' %}">
+        {#        <link rel="stylesheet" href="{% static 'register/css/bootstrap.min.css.map' %}">#}
+    </head>
 	<body>
 		<div class="content-wrap">		
 			<div class="header">
@@ -28,79 +33,121 @@
 							注册我买网
 							<p>已有我买网账号？<a href="#">登录</a></p>
 							</div>
-							<div class="main-cont">
-								<form>
-									<div class="long-input">
-										<input type="text"/>
-										<label class="msg">邮箱/手机</label>
-										<div class="error-msg">
-											<p></p>
-										</div>
-									</div>
-									<div class="long-input">
-										<input type="text"/>
-										<label class="msg">用户名</label>
-										<div class="error-msg">
-											<p></p>
-										</div>
-									</div>
-									<div class="long-input">
-										<input type="password"/>
-										<label class="msg">密码</label>
-										<div class="error-msg">
-											<p></p>
-										</div>
-									</div>	
-									<div class="long-input">
-										<input type="password"/>
-										<label class="msg">确认密码</label>
-										<div class="error-msg">
-											<p></p>
-										</div>
-									</div>	
-									<div class="long-input">
-										<input type="text"/>
-										<label class="msg">填写手机号</label>
-										<div class="error-msg">
-											<p></p>
-										</div>
-									</div>
-									<div class="long-input">
-										<input type="text" class="short"/>
-										<label class="msg">手机验证码</label>
-										<p class="phone" >发送验证码</p> 
-										<div class="error-msg">
-											<p></p>
-										</div>
-									</div>
-									<div class="clause-wrap clearfix">
-										<div class="clause">
-											<input type="checkbox" name="" id="" value="" />
-											<a href="#">我已阅读并同意《我买网网上商城服务条款》</a>
-											<div class="error-msg">
-												<p></p>
-											</div>
-										</div>
-									</div>
-									<div class="refer-btn">
-										<input type="button" name="" id="" value="立即注册" />
-										<span>
-											我有邀请码
-										</span>
-									</div>
-								</form>
-							</div>
-						</div>		
-					</div>								
-				</div>					
+{#							<div class="main-cont">#}
+{#								<form>#}
+{#									<div class="long-input">#}
+{#										<input type="text"/>#}
+{#										<label class="msg">邮箱/手机</label>#}
+{#										<div class="error-msg">#}
+{#											<p></p>#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="long-input">#}
+{#										<input type="text"/>#}
+{#										<label class="msg">用户名</label>#}
+{#										<div class="error-msg">#}
+{#											<p></p>#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="long-input">#}
+{#										<input type="password"/>#}
+{#										<label class="msg">密码</label>#}
+{#										<div class="error-msg">#}
+{#											<p></p>#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="long-input">#}
+{#										<input type="password"/>#}
+{#										<label class="msg">确认密码</label>#}
+{#										<div class="error-msg">#}
+{#											<p></p>#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="long-input">#}
+{#										<input type="text"/>#}
+{#										<label class="msg">填写手机号</label>#}
+{#										<div class="error-msg">#}
+{#											<p></p>#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="long-input">#}
+{#										<input type="text" class="short"/>#}
+{#										<label class="msg">手机验证码</label>#}
+{#										<p class="phone" >发送验证码</p>#}
+{#										<div class="error-msg">#}
+{#											<p></p>#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="clause-wrap clearfix">#}
+{#										<div class="clause">#}
+{#											<input type="checkbox" name="" id="" value="" />#}
+{#											<a href="#">我已阅读并同意《我买网网上商城服务条款》</a>#}
+{#											<div class="error-msg">#}
+{#												<p></p>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="refer-btn">#}
+{#										<input type="button" name="" id="" value="立即注册" />#}
+{#										<span>#}
+{#											我有邀请码#}
+{#										</span>#}
+{#									</div>#}
+{#								</form>#}
+{##}
+{#                                <form action="{% url 'mt:register' %}" method="post">#}
+{##}
+{#                                    邮箱#}
+{#                                    <div class="form-group has-success has-feedback">#}
+{#                                        <label class="control-label" for="inputSuccess2">Input with success</label>#}
+{#                                        <input type="text" class="form-control" id="inputSuccess2"#}
+{#                                               aria-describedby="inputSuccess2Status">#}
+{#                                        <span class="glyphicon glyphicon-ok form-control-feedback"#}
+{#                                              aria-hidden="true"></span>#}
+{#                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>#}
+{#                                    </div>#}
+{#                                    <p>#}
+{#                                    <div class="form-group has-success">#}
+{#                                        <label class="control-label" for="inputSuccess1">Input with success</label>#}
+{#                                        <input type="text" class="form-control" id="inputSuccess1"#}
+{#                                               aria-describedby="helpBlock2">#}
+{#                                        <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>#}
+{#                                    </div>#}
+{#                                    </p>#}
+{#                                    <p>#}
+{#                                    <div class="form-group has-error">#}
+{#                                        <label class="control-label" for="inputError1">Input with error</label>#}
+{#                                        <input type="text" class="form-control" id="inputError1">#}
+{#                                    </div>#}
+{#                                    </p>#}
+{##}
+{#                                </form>#}
+{#							</div>#}
+                            <form action="{% url 'mt:register' %}" method="post" id="register-view">
+                                <div class="form-group has-success has-feedback">
+                                    <label class="control-label" for="inputSuccess2">Input with success</label>
+                                    <input type="text" class="form-control" id="inputSuccess2"
+                                           aria-describedby="inputSuccess2Status">
+                                    <span class="glyphicon glyphicon-ok form-control-feedback"
+                                          aria-hidden="true"></span>
+                                    <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                </div>
+                            </form>
+						</div>
+
+
+					</div>
+				</div>
 			</div>
+
+
 		</div>
 		<ul class="feeter">
 			<li>
 				Copyright©2009-2017 womai.com.hk All Rights Reserved 中粮海优（北京）有限公司版权所有<br />
 				中粮海优（北京）有限公司 北京市朝阳区朝阳门南大街8号18F-09室<br />
 				<p>
-					<a href="#"><img src="../img/registerimg/beian.png"/><b>京公网安备 11010102000458号</b></a>
+					<a href="#"><img src="{% static 'register/img/registerimg/beian.png' %}"/><b>京公网安备 11010102000458号</b></a>
 				</p>
 				<span>京ICP备 13003995号 营业执照（统一社会信用代码）91110000055590239L 食品经营许可证（社会信用代码）05559023-9</span>
 				

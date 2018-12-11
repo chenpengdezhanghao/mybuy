@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+#商品类
 class Items(models.Model):
     name = models.CharField(max_length=150)
     price = models.FloatField(max_length=20)
@@ -11,3 +12,16 @@ class Items(models.Model):
 
     class Meta:
         db_table = 'mybuy_items'
+
+
+#用户模型类
+class User(models.Model):
+    email = models.CharField(max_length=100,unique=True)
+    password = models.CharField(max_length=50)
+    name = models.CharField(max_length=40)
+    phone = models.CharField(max_length=20)
+
+    token = models.CharField(max_length=256)
+
+    class Meta:
+        db_table = 'my_user'

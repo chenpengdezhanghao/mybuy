@@ -17,8 +17,13 @@ def index(request):
     #         items.unit = dict['unit']
     #         items.price = dict['price']
     #         items.save()
+    items = Items.objects.all()
 
-    return render(request,'index/index.html')
+    data = {
+        "items": items
+    }
+    print(items.first().headImg)
+    return render(request,'index/index.html',context=data)
 
 
 def cart(request):
@@ -26,7 +31,7 @@ def cart(request):
 
 
 def detail(request):
-    items = Items.objects.first()
+    items = Items.objects.filter(pk=id).first()
 
     data = {
         "items":items
@@ -34,3 +39,10 @@ def detail(request):
     print(data)
     return render(request,'detail/detail.html',context=data)
 
+
+def register(request):
+    return render(request,'register/register.html')
+
+
+def login(request):
+    return render(request,'login/login.html')
