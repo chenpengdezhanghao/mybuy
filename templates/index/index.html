@@ -30,26 +30,31 @@
             <li class="float">欢迎您！</li>
             <li class="float"><a class="log" style="color:#8cb91e" href="{% url 'mt:login' %}">{{ name | default:'未登录' }}</a></li>
             <li class="float"><a class="reg" href="{% url 'mt:register' %}">注册</a></li>
+            {% if name %}
+                <section class="quit">
+                    <a href="{% url 'mt:logout' %}"> 退出登录 </a>
+                </section>
+            {% endif %}
         </ul>
         <ul class="nav-r" style="margin-right: 10px;">
             <li class="fl own"><p><a href="#"><span class="text">我的账户<i></i></span></a></p>
-                <div class="mycount">
-                    <p><span>您还没有登录</span><a style="color:#8cb91e" href="#" class="log">登录</a></p>
-                    <ul>
-                        <li><a href="#">待付款订单</a></li>
-                        <li><a href="#">我的消息</a></li>
-                        <li><a href="#">待签收订单</a></li>
-                        <li><a href="#">我的订单</a></li>
-                        <li><a href="#">支付卡账户</a></li>
-                        <li><a href="#">我的积分</a></li>
-                        <li><a href="#">优惠券/团购卡</a></li>
-                        <li><a href="#">我的收藏</a></li>
-                        <li><a href="#">电子礼品卡</a></li>
-                        <li><a href="#">兑 换 券</a></li>
-                    </ul>
-                </div>
+{#                <div class="mycount">#}
+{#                    <p><span>您还没有登录</span><a style="color:#8cb91e" href="" class="log">登录</a></p>#}
+{#                    <ul>#}
+{#                        <li><a href="#">待付款订单</a></li>#}
+{#                        <li><a href="#">我的消息</a></li>#}
+{#                        <li><a href="#">待签收订单</a></li>#}
+{#                        <li><a href="#">我的订单</a></li>#}
+{#                        <li><a href="#">支付卡账户</a></li>#}
+{#                        <li><a href="#">我的积分</a></li>#}
+{#                        <li><a href="#">优惠券/团购卡</a></li>#}
+{#                        <li><a href="#">我的收藏</a></li>#}
+{#                        <li><a href="#">电子礼品卡</a></li>#}
+{#                        <li><a href="#">兑 换 券</a></li>#}
+{#                    </ul>#}
+{#                </div>#}
             </li>
-            <li class="cart fl"><p><a href="#"><span class="text">购物车<b>0</b>件</span></a></p></li>
+            <li class="cart fl"><p><a href="{% url 'mt:cart' %}"><span class="text">购物车</span></a></p></li>
             <li class="line float">|</li>
             <li class="float own"><p><a href="#"><span class="text">客户服务<i></i></span></a></p>
                 <div class="mycount consumer">
@@ -789,73 +794,73 @@
             </div>
             <div class="madlist-wrap">
                 <ul class="madlist">
-{#                    {% for item in items %}#}
-{#                        <li><a class="changeimg" href="{% url 'mt:detail' %}"><img src="/static/{{ item.headImg }}"></a>#}
-{#                            <div class="infor">#}
-{#                            <p class="item"><a href="#">{{ item.name }}</a></p>#}
-{##}
-{#                            <p class="buy-btn"><span class="buy-l">￥<span>{{ item.price }}</span></span><a href="#">去看看</a></p>#}
+                    {% for item in items %}
+                        <li><a class="changeimg" href="{% url 'mt:detail02' item.id %}"><img src="/static/{{ item.headImg }}"></a>
+                            <div class="infor">
+                            <p class="item"><a href="#">{{ item.name }}</a></p>
+
+                            <p class="buy-btn"><span class="buy-l">￥<span>{{ item.price }}</span></span><a href="#">去看看</a></p>
+                        </div>
+                        </li>
+                    {% endfor %}
+
+
+{#                    <li><a class="changeimg" href="{% url 'mt:detail' %}"><img src="{% static 'index/img/indeximg/mad-01.jpg' %}"></a>#}
+{#                        <div class="infor">#}
+{#                            <p class="item"><a href="{% url 'mt:detail' %}">维多丽白肉蜜柚2粒礼盒装</a></p>#}
+{#                            <p class="infortext"><a href="{% url 'mt:detail' %}">2.4-2.8kg | 肉清甜,水分含量适</a></p>#}
+{#                            <p class="buy-btn"><span class="buy-l">￥<span>29.9</span></span><a href="{% url 'mt:detail' %}">去看看</a></p>#}
 {#                        </div>#}
-{#                        </li>#}
-{#                    {% endfor %}#}
-
-
-                    <li><a class="changeimg" href="{% url 'mt:detail' %}"><img src="{% static 'index/img/indeximg/mad-01.jpg' %}"></a>
-                        <div class="infor">
-                            <p class="item"><a href="{% url 'mt:detail' %}">维多丽白肉蜜柚2粒礼盒装</a></p>
-                            <p class="infortext"><a href="{% url 'mt:detail' %}">2.4-2.8kg | 肉清甜,水分含量适</a></p>
-                            <p class="buy-btn"><span class="buy-l">￥<span>29.9</span></span><a href="{% url 'mt:detail' %}">去看看</a></p>
-                        </div>
-                    </li>
-                    <li><a class="changeimg" href="{% url 'mt:detail02' %}"><img src="{% static 'index/img/indeximg/mad-02.jpg' %}"></a>
-                        <div class="infor">
-                            <p class="item"><a href="{% url 'mt:detail02' %}">好沃得低脂牛奶</a></p>
-                            <p class="infortext"><a href="{% url 'mt:detail02' %}">1L | 为身体补充能量，打造健康</a></p>
-                            <p class="buy-btn"><span class="buy-l">￥<span>89</span></span><a href="{% url 'mt:detail02' %}">去看看</a></p>
-                        </div>
-                    </li>
-                    <li><a class="changeimg" href="{% url 'mt:detail03' %}"><img src="{% static 'index/img/indeximg/mad-03.jpg' %}"></a>
-                        <div class="infor">
-                            <p class="item"><a href="{% url 'mt:detail03' %}">蒙牛纯甄巴氏杀菌热处理风</a></p>
-                            <p class="infortext"><a href="{% url 'mt:detail03' %}">200g*24 | 早餐好搭档</a></p>
-                            <p class="buy-btn"><span class="buy-l">￥<span>89.9</span></span><a href="{% url 'mt:detail03' %}">去看看</a></p>
-                        </div>
-                    </li>
-                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-04.jpg' %}"></a>
-                        <div class="infor">
-                            <p class="item"><a href="#">特鲜炼奶芝士味饼干</a></p>
-                            <p class="infortext"><a href="#">600g*2 | 超大包实惠装，好吃又</a></p>
-                            <p class="buy-btn"><span class="buy-l">￥<span>19.8</span></span><a href="#">去看看</a></p>
-                        </div>
-                    </li>
-                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-05.jpg' %}"></a>
-                        <div class="infor">
-                            <p class="item"><a href="#">Friso美素佳儿金装幼儿配方</a></p>
-                            <p class="infortext"><a href="#">900g | 12-36个月宝宝适用</a></p>
-                            <p class="buy-btn"><span class="buy-l">￥<span>169</span></span><a href="#">去看看</a></p>
-                        </div>
-                    </li>
-                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-06.jpg' %}"></a>
-                        <div class="infor">
-                            <p class="item"><a href="#">SUNSIDES 上质脱脂纯牛奶</a></p>
-                            <p class="infortext"><a href="#">1L*12 | 法国原装进口</a></p>
-                            <p class="buy-btn"><span class="buy-l">￥<span>89</span></span><a href="#">去看看</a></p>
-                        </div>
-                    </li>
-                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-07.jpg' %}"></a>
-                        <div class="infor">
-                            <p class="item"><a href="#">丝塔芙（Cetaphil）洁面乳</a></p>
-                            <p class="infortext"><a href="#">118ml *2瓶 | 便携体验装，温润</a></p>
-                            <p class="buy-btn"><span class="buy-l">￥<span>89.9</span></span><a href="#">去看看</a></p>
-                        </div>
-                    </li>
-                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-08.jpg' %}"></a>
-                        <div class="infor">
-                            <p class="item"><a href="#">CHIVAS芝华士12年苏格兰</a></p>
-                            <p class="infortext"><a href="#">700ml | 口感醇和，适合春秋季</a></p>
-                            <p class="buy-btn"><span class="buy-l">￥<span>239</span></span><a href="#">去看看</a></p>
-                        </div>
-                    </li>
+{#                    </li>#}
+{#                    <li><a class="changeimg" href="{% url 'mt:detail02' %}"><img src="{% static 'index/img/indeximg/mad-02.jpg' %}"></a>#}
+{#                        <div class="infor">#}
+{#                            <p class="item"><a href="{% url 'mt:detail02' %}">好沃得低脂牛奶</a></p>#}
+{#                            <p class="infortext"><a href="{% url 'mt:detail02' %}">1L | 为身体补充能量，打造健康</a></p>#}
+{#                            <p class="buy-btn"><span class="buy-l">￥<span>89</span></span><a href="{% url 'mt:detail02' %}">去看看</a></p>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li><a class="changeimg" href="{% url 'mt:detail03' %}"><img src="{% static 'index/img/indeximg/mad-03.jpg' %}"></a>#}
+{#                        <div class="infor">#}
+{#                            <p class="item"><a href="{% url 'mt:detail03' %}">蒙牛纯甄巴氏杀菌热处理风</a></p>#}
+{#                            <p class="infortext"><a href="{% url 'mt:detail03' %}">200g*24 | 早餐好搭档</a></p>#}
+{#                            <p class="buy-btn"><span class="buy-l">￥<span>89.9</span></span><a href="{% url 'mt:detail03' %}">去看看</a></p>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-04.jpg' %}"></a>#}
+{#                        <div class="infor">#}
+{#                            <p class="item"><a href="#">特鲜炼奶芝士味饼干</a></p>#}
+{#                            <p class="infortext"><a href="#">600g*2 | 超大包实惠装，好吃又</a></p>#}
+{#                            <p class="buy-btn"><span class="buy-l">￥<span>19.8</span></span><a href="#">去看看</a></p>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-05.jpg' %}"></a>#}
+{#                        <div class="infor">#}
+{#                            <p class="item"><a href="#">Friso美素佳儿金装幼儿配方</a></p>#}
+{#                            <p class="infortext"><a href="#">900g | 12-36个月宝宝适用</a></p>#}
+{#                            <p class="buy-btn"><span class="buy-l">￥<span>169</span></span><a href="#">去看看</a></p>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-06.jpg' %}"></a>#}
+{#                        <div class="infor">#}
+{#                            <p class="item"><a href="#">SUNSIDES 上质脱脂纯牛奶</a></p>#}
+{#                            <p class="infortext"><a href="#">1L*12 | 法国原装进口</a></p>#}
+{#                            <p class="buy-btn"><span class="buy-l">￥<span>89</span></span><a href="#">去看看</a></p>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-07.jpg' %}"></a>#}
+{#                        <div class="infor">#}
+{#                            <p class="item"><a href="#">丝塔芙（Cetaphil）洁面乳</a></p>#}
+{#                            <p class="infortext"><a href="#">118ml *2瓶 | 便携体验装，温润</a></p>#}
+{#                            <p class="buy-btn"><span class="buy-l">￥<span>89.9</span></span><a href="#">去看看</a></p>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li><a class="changeimg" href="#"><img src="{% static 'index/img/indeximg/mad-08.jpg' %}"></a>#}
+{#                        <div class="infor">#}
+{#                            <p class="item"><a href="#">CHIVAS芝华士12年苏格兰</a></p>#}
+{#                            <p class="infortext"><a href="#">700ml | 口感醇和，适合春秋季</a></p>#}
+{#                            <p class="buy-btn"><span class="buy-l">￥<span>239</span></span><a href="#">去看看</a></p>#}
+{#                        </div>#}
+{#                    </li>#}
                 </ul>
                 <div class="left-btn">
 

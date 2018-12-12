@@ -111,8 +111,13 @@ def login(request):
             return render(request, 'login/login.html', context={'u_err': '账号不存在'})
 
 
-def detail02(request):
-    return render(request,'detail/detail02.html')
+def detail02(request,id):
+    items = Items.objects.get(pk=id)
+
+    data = {
+        "items":items
+    }
+    return render(request,'detail/detail02.html',context=data)
 
 
 def detail03(request):
@@ -131,3 +136,8 @@ def checkemail(request):
 
 def middle(request):
     return render(request,'register/middle.html')
+
+
+def logout(request):
+    request.session.flush()
+    return redirect('mt:login')

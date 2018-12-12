@@ -294,6 +294,28 @@ a:hover {
 	margin-right: 2px;
 	font-weight: normal;
 }
+
+/*****/
+.detail-top width clearfix .detail-t-r .bt-wrapper{
+    position: absolute;
+    right: 0.2rem;
+    bottom: 0;
+    width: 28%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+    text-align: right;
+}
+.detail-top width clearfix .detail-t-r .bt-wrapper .glyphicon{
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.1rem;
+}
+.detail-top width clearfix .detail-t-r .bt-wrapper .num{
+    margin: 0.2rem;
+}
+/*******/
 .main-nav-wrap .main-nav .allkinds .list .kinds h3 .kind:hover{
 	color: #8cb91e;
 }
