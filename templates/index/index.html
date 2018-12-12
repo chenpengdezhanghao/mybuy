@@ -28,7 +28,7 @@
         </ul>
         <ul class="nav-m fl">
             <li class="float">欢迎您！</li>
-            <li class="float"><a class="log" style="color:#8cb91e" href="{% url 'mt:login' %}">登录</a></li>
+            <li class="float"><a class="log" style="color:#8cb91e" href="{% url 'mt:login' %}">{{ name | default:'未登录' }}</a></li>
             <li class="float"><a class="reg" href="{% url 'mt:register' %}">注册</a></li>
         </ul>
         <ul class="nav-r" style="margin-right: 10px;">

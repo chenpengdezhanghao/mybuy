@@ -1,5 +1,9 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+import hashlib
+import random
+import time
+
+from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from app.models import Items, User
@@ -19,9 +23,20 @@ def index(request):
     #         items.save()
     items = Items.objects.all()
 
+    token = request.session.get('token')
+
+
+    data = {}
     data = {
         "items": items
     }
+    if token:
+        user = User.objects.get(token=token)
+        data['name'] = user.name
+        data['phone'] = user.phone
+        data['email'] = user.email
+
+
     print(items.first().headImg)
     return render(request,'index/index.html',context=data)
 
@@ -41,10 +56,16 @@ def detail(request):
 
 
 def generate_password(param):
-    # md5 = hashlib.md5()
-    # md5.update(param.encode('utf-8'))
-    # return md5.hexdigest()
-    pass
+    md5 = hashlib.md5()
+    md5.update(param.encode('utf-8'))
+    return md5.hexdigest()
+
+
+def generate_token():
+    md5 = hashlib.md5()
+    temp = str(time.time()) + str(random.random())
+    md5.update(temp.encode('utf-8'))
+    return md5.hexdigest()
 
 
 def register(request):
@@ -56,11 +77,38 @@ def register(request):
         user.password = generate_password(request.POST.get('password'))
         user.name = request.POST.get('name')
         user.phone = request.POST.get('phone')
-    return render(request,'index/index.html')
+
+        # 状态保持
+        user.token = generate_token()
+        user.save()
+        request.session['token'] = user.token
+
+        return redirect('mt:middle')
+    
+    
 
 
 def login(request):
-    return render(request,'login/login.html')
+    if request.method == 'GET':
+        return render(request, 'login/login.html')
+    elif request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        print(generate_password(password))
+
+        try:
+            # 不存在，会抛出异常
+            # 多个时，会抛出异常　【email是唯一约束】
+            user = User.objects.get(email=email)
+            if user.password == generate_password(password):
+                user.token = generate_token()
+                user.save()
+                request.session['token'] = user.token
+                return redirect('mt:index')
+            else:
+                return render(request, 'login/login.html', context={'p_err': '密码错误'})
+        except:
+            return render(request, 'login/login.html', context={'u_err': '账号不存在'})
 
 
 def detail02(request):
@@ -69,3 +117,17 @@ def detail02(request):
 
 def detail03(request):
     return render(request,'detail/detail03.html')
+
+
+def checkemail(request):
+    email = request.GET.get('email')
+
+    users = User.objects.filter(email=email)
+    if users.exists():
+        return JsonResponse({'msg': '账号已被占用!', 'status': 0})
+    else:
+        return JsonResponse({'msg': '账号是可以使用!', 'status': 1})
+
+
+def middle(request):
+    return render(request,'register/middle.html')

@@ -6,9 +6,11 @@
 		<title>会员登录_我买网</title>
 		<script src="{% static 'login/js/jquery-1.12.3.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'login/js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
+        <script src="{% static 'register/js/bootstrap.min.js' %}"></script>
 		<script src="{% static 'login/js/login.js' %}" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="{% static 'login/css/reset.css' %}"/>
 		<link rel="stylesheet" type="text/css" href="{% static 'login/css/Login.css' %}"/>
+        <link rel="stylesheet" href="{% static 'register/css/bootstrap.min.css' %}">
 	</head>
 	<body>
 		<div class="content-wrap">		
@@ -28,27 +30,28 @@
 					<div class="login-outside">
 						<div class="login-inside">
 							<h3>请登录中粮我买网</h3>
-							<form>
-								<div class="login-input">
-									<input type="text" name="" id="" value="" />
-									<label class="msg">用户名/邮箱/手机号</label>
-									<p><span><a href="#">忘记登录密码？</a></span></p>
-								</div>
-								
-								<div class="login-input">
-									<input type="password" name="" id="" value="" />
-									<label class="msg">密码</label>
-									<!--<p><span><a href="#">看不清  换一张</a></span></p>-->
-								</div>
-								<!--<div class="login-input">
-									<input type="text" class="short"/>
-									<label class="msg">验证码</label>
-									<input class="code" type="button" name="" id="" value="3E6K" />
-								</div>-->
-								<div class="login-btn">
-									<input type="button" name="" id="" value="登录" />
-									<a href="#">注册</a>
-								</div>
+							<form action="{% url 'mt:login' %}" method="post" id="login-view">
+                                {% csrf_token %}
+                                <div class="form-group has-feedback" id="email">
+                                    <input type="text" class="form-control" aria-describedby="inputSuccess2Status"
+                                           placeholder="邮箱" name="email">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <p>
+                                        {{ u_err }}
+                                    </p>
+                                </div>
+
+                                {#             密码#}
+                                <div class="form-group has-feedback" id="password">
+                                    <input type="password" class="form-control" aria-describedby="inputSuccess2Status"
+                                           placeholder="密码" name="password">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <p>
+                                        {{ p_err }}
+                                    </p>
+                                </div>
+
+                                <input type="submit" value="登录" id="subButton" disabled="disabled">
 								<div class="friend">
 									<h3>使用合作伙伴账号登录我买网</h3>
 									<ul class="friend-links">
