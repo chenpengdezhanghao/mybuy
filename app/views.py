@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from app.models import Items
+from app.models import Items, User
 
 
 def index(request):
@@ -31,18 +31,41 @@ def cart(request):
 
 
 def detail(request):
-    items = Items.objects.filter(pk=id).first()
+    # items = Items.objects.filter(pk=id).first()
+    items = Items.objects.all()
 
     data = {
-        "items":items
+        "items": items
     }
-    print(data)
     return render(request,'detail/detail.html',context=data)
 
 
+def generate_password(param):
+    # md5 = hashlib.md5()
+    # md5.update(param.encode('utf-8'))
+    # return md5.hexdigest()
+    pass
+
+
 def register(request):
-    return render(request,'register/register.html')
+    if request.method == 'GET':
+        return render(request, 'register/register.html')
+    elif request.method == 'POST':
+        user = User()
+        user.email = request.POST.get('email')
+        user.password = generate_password(request.POST.get('password'))
+        user.name = request.POST.get('name')
+        user.phone = request.POST.get('phone')
+    return render(request,'index/index.html')
 
 
 def login(request):
     return render(request,'login/login.html')
+
+
+def detail02(request):
+    return render(request,'detail/detail02.html')
+
+
+def detail03(request):
+    return render(request,'detail/detail03.html')

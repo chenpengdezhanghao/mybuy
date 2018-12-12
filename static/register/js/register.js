@@ -193,5 +193,21 @@ $(function(){
 	})
 	$(".header-logo").click(function(){
 		location.href = "../index.html";
-	})      
+	})
+
+	$('#kkkk #subButton').click(function () {
+        var isRegister = true   // 默认可以注册
+
+        $('input').each(function () {
+            if ($(this).val() == '') {
+                isRegister = false
+            }
+        })
+
+        console.log(isRegister)
+
+        if (isRegister){
+            $('#register-view').submit()
+        }
+    })
 })

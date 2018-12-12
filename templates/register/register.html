@@ -10,6 +10,7 @@
 		<script src="{% static 'register/js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
         <script src="{% static 'register/js/register.js' %}" type="text/javascript" charset="utf-8"></script>
         <script src="{% static 'register/js/my_register.js' %}"></script>
+
         <link rel="stylesheet" type="text/css" href="{% static 'register/css/reset.css' %}"/>
         <link rel="stylesheet" type="text/css" href="{% static 'register/css/register.css' %}"/>
         <link rel="stylesheet" href="{% static 'register/css/bootstrap.min.css' %}">
@@ -124,16 +125,53 @@
 {#                                </form>#}
 {#							</div>#}
                             <form action="{% url 'mt:register' %}" method="post" id="register-view">
-                                <div class="form-group has-success has-feedback">
-                                    <label class="control-label" for="inputSuccess2">Input with success</label>
-                                    <input type="text" class="form-control" id="inputSuccess2"
-                                           aria-describedby="inputSuccess2Status">
+                                {% csrf_token %}
+                                <div class="form-group has-feedback" id="email">
+                                    <input type="text" class="form-control" aria-describedby="inputSuccess2Status"
+                                           placeholder="邮箱" name="email">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <p class="text"></p>
+                                </div>
+
+                                {#             密码#}
+                                <div class="form-group has-feedback" id="password">
+                                    <input type="password" class="form-control" aria-describedby="inputSuccess2Status"
+                                           placeholder="密码" name="password">
                                     <span class="glyphicon glyphicon-ok form-control-feedback"
                                           aria-hidden="true"></span>
-                                    <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                    <p class="help">
+                                        格式：长度为6~12，且只能为数字、字母、下划线
+                                    </p>
                                 </div>
+
+                                <div class="form-group has-feedback" id="password-d">
+                                    <input type="password" class="form-control" aria-describedby="inputSuccess2Status"
+                                           placeholder="密码">
+                                    <span class="glyphicon glyphicon-ok form-control-feedback"
+                                          aria-hidden="true"></span>
+                                    <p class="help">
+                                        格式：两次密码输入要保持一致!
+                                    </p>
+                                </div>
+
+
+                                {#            名字#}
+                                <div class="form-group has-feedback" id="name">
+                                    <input type="text" class="form-control" aria-describedby="inputSuccess2Status"
+                                           placeholder="名字(3~12)" name="name">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                                {#            手机#}
+                                <div class="form-group has-feedback" id="phone">
+                                    <input type="text" class="form-control" aria-describedby="inputSuccess2Status"
+                                           placeholder="手机号" name="phone">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+
+                                {#            <input type="submit" value="注册">#}
+                                <button type="button" class="btn btn-primary" id="subButton"> 注册</button>
                             </form>
-						</div>
+                        </div>
 
 
 					</div>

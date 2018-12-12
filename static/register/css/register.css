@@ -160,6 +160,7 @@ a:hover{
 	height: 30px;
 	text-align: center;
 	padding-top: 10px;
+	background: greenyellow;
 	position: relative;
 }
 .refer-btn input{
@@ -167,7 +168,7 @@ a:hover{
 	height: 30px;
 	float: left;
 	color: #fff;
-	background: url(../../img/registerimg/login.png) 0px -5px no-repeat;
+	background: greenyellow;
 	border: none;
 	cursor: pointer;
 	line-height: 30px;
