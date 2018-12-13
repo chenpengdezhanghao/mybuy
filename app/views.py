@@ -6,6 +6,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
+from app import models
 from app.models import Items, User
 
 
@@ -117,6 +118,7 @@ def detail02(request,id):
     data = {
         "items":items
     }
+
     return render(request,'detail/detail02.html',context=data)
 
 
@@ -140,4 +142,11 @@ def middle(request):
 
 def logout(request):
     request.session.flush()
-    return redirect('mt:login')
+    return redirect('mt:index')
+
+
+def show(request):      #添加数据
+    obj = models.Items.objects.get(price=699)
+    obj.zoom = ["img/detailimg/common4-01.jpg"]
+    obj.save()
+    return HttpResponse('hao le')

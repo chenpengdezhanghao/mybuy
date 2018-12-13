@@ -14,4 +14,5 @@ urlpatterns = [
         'checkemail'),
     url(r'^middle/$',views.middle,name='middle'),
     url(r'^logout/$', views.logout, name='logout'),
+    url(r'^show/$',views.show,name='show')
 ]

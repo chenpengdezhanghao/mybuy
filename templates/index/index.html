@@ -797,9 +797,9 @@
                     {% for item in items %}
                         <li><a class="changeimg" href="{% url 'mt:detail02' item.id %}"><img src="/static/{{ item.headImg }}"></a>
                             <div class="infor">
-                            <p class="item"><a href="#">{{ item.name }}</a></p>
+                            <p class="item"><a href="{% url 'mt:detail02' item.id %}">{{ item.name }}</a></p>
 
-                            <p class="buy-btn"><span class="buy-l">￥<span>{{ item.price }}</span></span><a href="#">去看看</a></p>
+                            <p class="buy-btn"><span class="buy-l">￥<span>{{ item.price }}</span></span><a href="{% url 'mt:detail02' item.id %}">去看看</a></p>
                         </div>
                         </li>
                     {% endfor %}
