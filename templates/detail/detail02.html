@@ -6,7 +6,8 @@
 		<title>商品详情</title>
 		<script src="{% static 'detail/js/jquery-1.12.3.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'detail/js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
-		<script src="{% static 'detail/js/detail.js' %}" type="text/javascript" charset="utf-8"></script>
+{#		<script src="{% static 'detail/js/detail.js' %}" type="text/javascript" charset="utf-8"></script>#}
+        <script src="{% static 'detail/js/my_de.js' %}"></script>
 		<link rel="stylesheet" type="text/css" href="{% static 'detail/css/reset.css' %}"/>
 		<link rel="stylesheet" type="text/css" href="{% static 'detail/css/detail.css' %}"/>
 	    <link rel="stylesheet" href="{% static 'detail/css/my_de.css' %}">
@@ -223,7 +224,7 @@
 			</div>
 			<div class="detail-t-r">
 				<div class="tit">
-					<p>【自营】蒙牛纯甄巴氏杀菌热处理风味酸牛奶利乐钻200g*24/箱</p>
+					<p>{{ items.name }}</p>
 				</div>
 				<div class="t-middle clearfix">
 					<div class="m-tit">
@@ -261,116 +262,58 @@
 						</div>
 					</div>
 				</div>
-                <div class="bt-wrapper" id="bt_wrapper">
-                                加入购物车数量
-                                <span class="glyphicon glyphicon-minus"></span>
-                                <span class="num">
+{#                <div class="bt-wrapper" id="bt_wrapper">#}
+{#                                加入购物车数量#}
+{#                                <span class="glyphicon glyphicon-minus"></span>#}
+{#                                <span class="num">#}
 {#                                    {% for cart in carts %}#}
 {#                                        表示当前购物车记录，是这件商品#}
 {#                                        {% if goods.id == cart.goods.id %}#}
 {#                                            {{ cart.number }}#}
 {#                                        #}
-{#                                    {% endfor %}#}aaaaaaaaaaaaa
-                                </span>
-                                <span class="glyphicon glyphicon-plus"></span>
-                            </div>
-{#				<div class="buy-wrap">#}
-{#					<div class="buy clearfix">#}
-{#						<div class="buy-infor clearfix">#}
-{#							<div class="m-tit-l">#}
-{#								数量：#}
-{#							</div>#}
-{#							<div class="number">#}
-{#								<div class="num-ipt">#}
-{#									<input class="num" type="text" name="" id="" value="1" />#}
-{#									<span class="add">#}
-{#										+#}
-{#									</span>#}
-{#									<span class="cut">#}
-{#										-#}
-{#									</span>#}
-{#								</div>								#}
-{#							</div>							#}
-{#						</div>#}
-{#						<div class="buy-btn fl">#}
-{#							<b class="png"></b>#}
-{#							加入购物车						#}
-{#						</div>#}
-{#						<div class="app-btn fl">#}
-{#							<div class="btn">#}
-{#								<b class="png"></b>#}
-{#								扫一扫下单#}
-{#							</div>							#}
-{#						</div>#}
-{#						<div class="love-btn">#}
-{#							收藏#}
-{#						</div>						#}
-{#					</div>#}
-{#					<div id="alert">#}
-{#						<div class="alert-box">#}
-{#							<div class="buy-png">							#}
-{#								</div>#}
-{#							<div class="go-btn">#}
-{#								继续购物#}
-{#							</div>#}
-{#							<div class="alert-top">#}
-{#								<div class="title-top">#}
-{#									此商品成功放入购物车#}
-{#								</div>#}
-{#								<div class="font">#}
-{#									购物车共#}
-{#									<font>0</font>件宝贝#}
-{#									<span>合计</span><font>0</font>#}
-{#								</div>#}
-{#								<div class="alert-btn">#}
-{#									<div class="btn-left">#}
-{#										<a href="#">去购物车结算</a>#}
-{#									</div>#}
-{#								</div>#}
-{#							</div>#}
-{#						</div>#}
-{#					</div>						#}
-{#					<div class="groub">#}
-{#						<div class="groub-top">#}
-{#							<div class="top-tit">#}
-{#								组合套餐明细：#}
-{#							</div>#}
-{#							<div class="page">#}
-{#								<a href="javascript:;" class="cur-a">1</a>#}
-{#								<a href="javascript:;">2</a>#}
-{#							</div>#}
-{#						</div>#}
-{#						<div class="count-wrap">#}
-{#							<div class="count">#}
-{#								<ul class="clearfix">#}
-{#									<li>#}
-{#										<div class="gift">#}
-{#											<a href="#"><img src="{% static 'detail/img/detailimg/top-01.jpg' %}"/></a>#}
-{#										</div>#}
-{#										<h2><a href="#">【自营】蒙牛纯甄巴氏杀菌热处理风味酸牛奶利乐钻200g*24/箱</a></h2>#}
-{#										<span>×1</span>#}
-{#									</li>#}
-{#									<li>#}
-{#										<div class="gift">#}
-{#											<a href="#"><img src="{% static 'detail/img/detailimg/top-02.jpg' %}"/></a>#}
-{#										</div>#}
-{#										<h2><a href="#">【自营】可悠然欣怡幽香美肌沐浴550m(瓶装)/</a></h2>#}
-{#										<span>×1</span>#}
-{#									</li>#}
-{#									<li>#}
-{#										<div class="gift">#}
-{#											<a href="#"><img src="{% static 'detail/img/detailimg/top-03.jpg' %}"/></a>#}
-{#										</div>#}
-{#										<h2><a href="#">【自营】资生堂水之密语净澄水活护发素600ml/</a></h2>#}
-{#										<span>×1</span>#}
-{#									</li>#}
-{#								</ul>#}
-{#							</div>#}
-{#						</div>#}
-{#					</div>#}
-				</div>
-			</div>			
-		</div>
+{#                                    {% endfor %}#}
+{#                                </span>#}
+{#                                <span class="glyphicon glyphicon-plus"></span>#}
+{#                            </div>#}
+
+                <div>
+                    <ul class="btn-numbox">
+                        <li><span class="number">数量</span></li>
+                        <li>
+                            <ul class="count">
+                                <li><span id="num-jian" class="num-jian" >-</span></li>
+                                <li><input type="text" class="input-num" id="input-num" value="0"/></li>
+                                <li><span id="num-jia" class="num-jia">+</span></li>
+                            </ul>
+                        </li>
+
+                        　
+                        <script>
+                            　var num_jia = document.getElementById("num-jia");
+                        var num_jian = document.getElementById("num-jian");
+                        var input_num = document.getElementById("input-num");
+
+                        num_jia.onclick = function() {
+
+                        input_num.value = parseInt(input_num.value) + 1;
+                        }
+
+                        num_jian.onclick = function() {
+
+                        if(input_num.value <= 0) {
+                        input_num.value = 0;
+                        } else {
+
+                        input_num.value = parseInt(input_num.value) - 1;
+                        }
+
+                        }　
+                        </script>
+                    </ul>
+                </div>
+            <div><a href="{% url 'mt:cart' %}" id="join" items.id="{{ items.id }}">加入购物车</a></div>
+            </div>
+        </div>
 		<div class="main-count width clearfix">
 			<div class="main-l">
 				<div class="detail-l-list-wrap">

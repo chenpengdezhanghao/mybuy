@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from app import models
-from app.models import Items, User
+from app.models import Items, User, Cart
 
 
 def index(request):
@@ -42,8 +42,34 @@ def index(request):
     return render(request,'index/index.html',context=data)
 
 
+# def cart(request):
+#     return render(request,'cart/cart.html')
+
 def cart(request):
-    return render(request,'cart/cart.html')
+    token = request.session.get('token')
+    print(token)
+
+    if token:
+        user = User.objects.get(token=token)
+        carts = Cart.objects.filter(user=user).exclude(number=0)
+
+        data = {
+            'carts': carts
+        }
+
+        return render(request, 'cart/cart.html', context=data)
+    else:
+        return redirect('mt:login')
+    #     ids = request.GET.get('itemsid')
+    #     sum = request.GET.get('sum')
+    #     data = {}
+    #     data['ids'] = ids
+    #     data['sum'] = sum
+    # #     goods = Items.objects.get(id=id)
+    #     return render(request,'cart/cart.html',context=data)
+
+
+
 
 
 def detail(request):
@@ -150,3 +176,48 @@ def show(request):      #添加数据
     obj.zoom = ["img/detailimg/common4-01.jpg"]
     obj.save()
     return HttpResponse('hao le')
+
+
+def addcart(request):
+    # 获取token  >> user
+    token = request.session.get('token')
+
+    # 获取商品id
+    goodsid = request.GET.get('itemsid')
+    sum = request.GET.get('sum')
+    print(goodsid,sum)
+
+    data = {}
+
+    if token:  # 登录
+        # 获取用户
+        user = User.objects.get(token=token)
+        # 获取商品
+        goods = Items.objects.get(pk=goodsid)
+
+        # 1、 第一次添加的商品是不存在的，要往数据库中添加一条新记录
+        # 2、 商品已存在，即修改商品数量
+
+        # 判断需要添加的商品是否存在
+        carts = Cart.objects.filter(user=user).filter(goods=goods)
+        if carts.exists():  # 存在
+            cart = carts.first()
+            cart.number = cart.number + 1
+            cart.save()
+        else:  # 不存在
+            cart = Cart()
+            cart.user = user
+            cart.goods = goods
+            cart.number = 1
+            cart.save()
+
+        return JsonResponse({'msg': '{},添加购物车成功'.format(goods.name), 'number': cart.number, 'status': 1})
+
+    else:  # 没登录
+        # ajax操作中，不能重定向
+        # ajax异步请求操作，数据的传输
+        # 即ajax请求，如果想页面跳转(服务器重定向不了)，客户端处理
+        # return redirect('axf:login')
+        data['msg'] = '请登录后操作!'
+        data['status'] = -1
+        return JsonResponse(data)

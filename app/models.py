@@ -25,3 +25,19 @@ class User(models.Model):
 
     class Meta:
         db_table = 'my_user'
+
+
+
+class Cart(models.Model):
+    # 用户
+    user = models.ForeignKey(User)
+    # 商品
+    goods = models.ForeignKey(Items)
+    # 商品个数
+    number = models.IntegerField()
+    # 是否选中
+    isselect = models.BooleanField(default=True)
+
+
+    class Meta:
+        db_table = 'my_cart'
