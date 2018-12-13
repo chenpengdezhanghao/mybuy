@@ -7,12 +7,13 @@
 		<script src="{% static 'detail/js/jquery-1.12.3.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'detail/js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'detail/js/detail.js' %}" type="text/javascript" charset="utf-8"></script>
-        <script src="{% static 'detail/js/my_de.js' %}"></script>
+{#        <script src="{% static 'detail/js/my_de.js' %}"></script>#}
 {#        <script src="{% static 'register/js/bootstrap.min.js' %}"></script>#}
 		<link rel="stylesheet" type="text/css" href="{% static 'detail/css/reset.css' %}"/>
 		<link rel="stylesheet" type="text/css" href="{% static 'detail/css/detail.css' %}"/>
+        <link rel="stylesheet" href="{% static 'detail/css/my_de.css' %}">
         <link rel="stylesheet" href="{% static 'register/css/bootstrap.min.css' %}">
-	</head>
+    </head>
 	<body>
 		<div class="top_nav_wrap">
 			<div class="top_nav width clearfix">
@@ -251,13 +252,18 @@
 						</div>
 					</div>
 				</div>
-                <div class="bt-wrapper">
+                <div class="bt-wrapper" id="bt_wrapper">
                                 加入购物车数量
-                                <span class="glyphicon glyphicon-minus" goodsid="{{ item.id }}"></span>
+                                <span class="glyphicon glyphicon-minus"></span>
                                 <span class="num">
-
+{#                                    {% for cart in carts %}#}
+{#                                        表示当前购物车记录，是这件商品#}
+{#                                        {% if goods.id == cart.goods.id %}#}
+{#                                            {{ cart.number }}#}
+{#                                        #}
+{#                                    {% endfor %}#}aaaaaaaaaaaaa
                                 </span>
-                                <span class="glyphicon glyphicon-plus" goodsid="{{ item.id }}"></span>
+                                <span class="glyphicon glyphicon-plus"></span>
                             </div>
 {#				<div class="buy-wrap">#}
 {#					<div class="buy clearfix">#}
