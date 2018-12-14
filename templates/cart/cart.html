@@ -89,7 +89,62 @@
                             <div class="goods">
                                 <div class="img">
                                     <img src="/static/{{ cart.goods.headImg }}" alt="">
+                                    <div class="cartplus">
+                                         <ul class="btn-numbox">
+                        <li><span class="number">数量</span></li>
+                        <li>
+                            <ul class="count" id="cartsum">
+                                <li><span id="num-jian" class="num-jian" >-</span></li>
+                                <li><input type="text" class="input-num" id="input-num" value="{{ cart.number }}"/></li>
+                                <li><span id="num-jia" class="num-jia">+</span></li>
+                            </ul>
+                            <script>
+                            　var num_jia = document.getElementById("num-jia");
+                        var num_jian = document.getElementById("num-jian");
+                        var input_num = document.getElementById("input-num");
 
+                        num_jia.onclick = function() {
+
+                        input_num.value = parseInt(input_num.value) + 1;
+                        }
+
+                        num_jian.onclick = function() {
+
+                        if(input_num.value <= 0) {
+                        input_num.value = 0;
+                        } else {
+
+                        input_num.value = parseInt(input_num.value) - 1;
+                        }
+
+                        }　
+                        </script>
+                        </li>
+
+                        　
+                        <script>
+                            　var num_jia = document.getElementById("num-jia");
+                        var num_jian = document.getElementById("num-jian");
+                        var input_num = document.getElementById("input-num");
+
+                        num_jia.onclick = function() {
+
+                        input_num.value = parseInt(input_num.value) + 1;
+                        }
+
+                        num_jian.onclick = function() {
+
+                        if(input_num.value <= 0) {
+                        input_num.value = 0;
+                        } else {
+
+                        input_num.value = parseInt(input_num.value) - 1;
+                        }
+
+                        }　
+                        </script>
+                    </ul>
+                                    </div>
                                 </div>
                                 <div class="detail">
                                     <p class="name">单价:  ￥ {{ cart.goods.price }}</p>

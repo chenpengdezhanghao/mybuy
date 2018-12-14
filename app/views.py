@@ -141,10 +141,15 @@ def login(request):
 def detail02(request,id):
     items = Items.objects.get(pk=id)
 
-    data = {
-        "items":items
-    }
 
+
+    token = request.session.get('token')
+
+
+
+    data = {
+        "items": items
+    }
     return render(request,'detail/detail02.html',context=data)
 
 
