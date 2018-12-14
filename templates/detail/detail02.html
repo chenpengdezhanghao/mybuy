@@ -21,8 +21,8 @@
 				</ul>
 				<ul class="nav-m float">
 					<li class="float">欢迎您！</li>
-					<li class="float"><a class="log" style="color:#8cb91e" href="#">登录</a></li>
-					<li class="float"><a class="reg" href="#">注册</a></li>
+					<li class="float"><a class="log" style="color:#8cb91e" href="#"></a></li>
+					<li class="float"><a class="reg" href="#"></a></li>
 				</ul>
 				<ul class="nav-r" style="margin-right: 10px;">
 					<li class="own fl"><p><a href="#"><span class="text">我的账户<i></i></span></a></p>
@@ -146,7 +146,7 @@
 							<i>0</i>
 						</span>
 						<span class="text">
-							<a href="#">购物车</a>
+							<a href="{% url 'mt:cart' %}">购物车</a>
 						</span>
 						<span class="arrow">
 
@@ -311,7 +311,7 @@
                         </script>
                     </ul>
                 </div>
-            <div><a href="{% url 'mt:cart' %}" id="join" items.id="{{ items.id }}">加入购物车</a></div>
+            <div><a href="#" id="join" items.id="{{ items.id }}">加入购物车</a></div>
             </div>
         </div>
 		<div class="main-count width clearfix">

@@ -202,13 +202,13 @@ def addcart(request):
         carts = Cart.objects.filter(user=user).filter(goods=goods)
         if carts.exists():  # 存在
             cart = carts.first()
-            cart.number = cart.number + 1
+            cart.number = cart.number + int(sum)
             cart.save()
         else:  # 不存在
             cart = Cart()
             cart.user = user
             cart.goods = goods
-            cart.number = 1
+            cart.number = sum
             cart.save()
 
         return JsonResponse({'msg': '{},添加购物车成功'.format(goods.name), 'number': cart.number, 'status': 1})

@@ -9,6 +9,7 @@
 		<script src="{% static 'cart/js/cart.js' %}" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="{% static 'cart/css/reset.css' %}"/>
 		<link rel="stylesheet" type="text/css" href="{% static 'cart/css/cart.css' %}"/>
+        <link rel="stylesheet" href="{% static 'cart/css/my.css' %}">
 	</head>
 	<body>
 		<div class="cart-content">
@@ -38,12 +39,12 @@
 						</li>
 					</ul>
 					<ul class="top-login">
-						<li class="none"><span>qzuser，<a class="log" href="#">请登录</a></span></li>
-						<li class="none">|<a class="reg" style="margin-left: 14px;" href="#">免费注册</a></li>
+						<li class="none"><span><a class="log" href="{% url 'mt:index' %}">首页</a></span></li>
+						<li class="none">|<a class="reg" style="margin-left: 14px;" href="#"></a></li>
 					</ul>
 				</div>				
 			</div>
-			<div class="header-box w">
+			<div cl8ass="header-box w">
 				<div class="logo">
 
 					<a href="#"><img src={% static 'register/img/registerimg/logo.jpg' %}/></a>
@@ -52,7 +53,55 @@
 					<li></li>
 				</ul>
 			</div>
+            <div>
+{#                <ul>#}
+{#                    {% for good in carts %}#}
+{#                        <li>#}
+{#                            <img src="/static/{{ good.goods.headImg }}" alt="">#}
+{#                        </li>#}
+{#                    {% endfor %}#}
+{#                    #}
+{#                </ul>#}
+               <div id="mycart">
+                   <ul>
+{#                       {% for cart in carts %}#}
+{#                           <li class="goods">#}
+{#                               <div class="confirm-wrapper" cartid="{{ cart.id }}">#}
+{#                                   {% if cart.isselect %}#}
+{#                                       <span class="glyphicon glyphicon-ok"></span>#}
+{#                                   {% else %}#}
+{#                                       <span class="no"></span>#}
+{#                                   {% endif %}#}
+{#                               </div>#}
+{#                               <div class="content-wrapper">#}
+{#                                   <div class="img">#}
+{#                                       <img src="{{ cart.goods.headImg }}" alt="">#}
+{#                                   </div>#}
+{#                                   <div class="detail">#}
+{#                                       <p class="name">{{ cart.goods.name }}</p>#}
+{#                                       <p class="price" price="{{ cart.goods.price }}"> ￥ {{ cart.goods.price }}</p>#}
+{#                                       <p class="num" num="{{ cart.number }}">x{{ cart.number }}</p>#}
+{#                                   </div>#}
+{#                               </div>#}
+{#                           </li>#}
+{#                       {% endfor %}#}
+                       {% for cart in carts %}
+                            <div class="goods">
+                                <div class="img">
+                                    <img src="/static/{{ cart.goods.headImg }}" alt="">
 
+                                </div>
+                                <div class="detail">
+                                    <p class="name">单价:  ￥ {{ cart.goods.price }}</p>
+                                    <p class="num1">数量: x{{ cart.number }}</p>
+                                </div>
+
+                            </div>
+                       {% endfor %}
+
+                   </ul>
+               </div>
+            </div>
 		</div>
 		<div class="feeter w">
 			<div class="beian">

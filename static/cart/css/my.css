@@ -1,0 +1,12 @@
+#mycart .goods{
+    background: yellow;
+}
+#mycart .img{
+    position: relative;
+}
+#mycart .detail{
+    left: 10px;
+}
+#mycart .cartplus{
+    float: right;
+}
